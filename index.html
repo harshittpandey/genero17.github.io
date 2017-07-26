@@ -6,39 +6,33 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Genero 2K17</title>
-	<meta name="description" content="Demo for tutorial 'Animated Heat Distortion Effects with WebGL'" />
-	<meta name="keywords" content="heat, haze, effect, webgl, svg, animation, web development, tutorial" />
 	<link rel="shortcut icon" href="favicon.ico">
 	<link href='https://fonts.googleapis.com/css?family=Playfair+Display:700' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="css/normalize.css" />
 	<link rel="stylesheet" type="text/css" href="css/demo.css" />
 	<link rel="stylesheet" type="text/css" href="css/water.css" />
-	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-
+	<link rel="stylesheet" type="text/css" href="css/slick-theme.css" />
+	<link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
+	<!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
+<script
+			  src="https://code.jquery.com/jquery-3.2.1.min.js"
+			  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+			  crossorigin="anonymous"></script>
+					<script src="js/flipclock.min.js"> </script>
+<script type="text/javascript" src="http://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/flipclock.css">
 	<!--[if IE]>
 		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
+	 <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet"> 
 	<style type="text/css">
 					p {
 			  margin-top:60px;
 			  margin-left:5px
 			}
 
-			.timer{
-			  border-style:double;
-			  border-width:thick;
-			  background:#2D2D2D;
-			  color:white;
-			}
 
-			.timer:hover{
-			  border-style:dotted;
-			  background:white;
-			  border-color:black;
-			  color:black;
-			 }
-
-		     h4{
+		     h1{
 		   font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
 		   font-size:     30px;
 		   line-height:   0.8;
@@ -48,6 +42,52 @@
 		    .w3-allerta {
          font-family: "Allerta Stencil", Sans-serif;
          }
+		 .subtitle {
+    font-family: 'Dancing Script', cursive;
+	font-size: 5vh;
+		 }
+		 .timer{
+			 font-size:1.75vw;
+			  margin-top:5vh;
+		 }
+		@media only screen and (max-width: 768px) {
+			.timer {
+				font-size:5vh;
+				margin-top:5vh;
+				min-width:100vw;
+				text-align:center;
+				right:10vw;
+				bottom:0;
+			}
+			.footer{
+				position:fixed;
+				bottom:2vh;
+				max-height: 20vh;
+				max-width: 100vw;
+				margin-left:0;
+			}
+
+		}
+		.footer{
+				position:fixed;
+				bottom:15vh;
+				max-height: 20vh;
+				max-width: 70vw;
+				margin-left: 15vw;
+
+		}
+			.slick{
+			}
+			.slick-img{
+	  		display: block;
+				max-height: 20vh;
+				max-width: 100vw;
+				width: auto;
+  			height: auto;
+			}
+    .flip-clock-divider .flip-clock-label {
+
+    color:transparent; }
 	</style>
 </head>
 
@@ -58,50 +98,88 @@
 				<canvas class="Background-canvas"></canvas>
 			</div>
 		</div>
-		<div style="margin-top: 2%">
-		.
-		<div class="timer w3-xlarge w3-display-topright w3-circle w3-display-topright" style="width:170px;height:170px">
-          <p id="demo" ></p>
-        </div>
-        </div>
-		<div class="intro">
-		    <h4 class="intro__subtitle" style="color: white">Start believing in Miracles, because so is</h4>
-			<h2 class="intro__title w3-allerta ">Genero 2k17</h2>
-			
+
+		<div class="intro" style="text-align:left;">
+			<h2 class="intro__title ">Genero 2k17</h2>
+						<h1 class="subtitle" style="color: white;text-align:justify">Some Sails never End</h1>
+			<div class="timer" align="center">
+			</div>
+		</div>
+		
+		<div class="footer" style="text-align:center;">
+			<h1 class="subtitle" style="color:white;">Our past sponsors</h1>
+			<div class="slick">
+
+				<img class="slick-img"  src="img/logos/aptron.png" />
+				<img class="slick-img"  src="img/logos/Bisleri.png" />
+				<img class="slick-img"  src="img/logos/Coca-Cola-logo.png" />
+				<img class="slick-img"  src="img/logos/EBay_logo.svg" />
+				<img class="slick-img"  src="img/logos/ibm-logo-png.png" />
+				<img class="slick-img"  src="img/logos/pnb-logo.png" />
+				<img class="slick-img"  src="img/logos/saavn.png" />
+				<img class="slick-img"  src="img/logos/smaash.png" />
+				<img class="slick-img"  src="img/logos/Tata_Consultancy_Services_Logo2.png" />
+				<img class="slick-img"  src="img/logos/WOW.png" />
+				<img class="slick-img"  src="img/logos/Grog.jpg" />
+				
+				
+			</div>
 		</div>
 	</div>
 	<!-- /container -->
 	<script src="js/water.js"></script>
-
 <script>
-	// Set the date we're counting down to
-	var countDownDate = new Date("July 27, 2017 00:00:00").getTime();
+	var currDate = new Date();
+	var relDate = new Date("2017-08-15");
+	var showSeconds = true;
+	const mq = window.matchMedia( "only screen and (max-width: 768px)" );
+	if(mq.matches === true)
+		showSeconds=false;
+	console.log(showSeconds)
+	var csClass = {"color":"white"};
+	var clock = $('.timer').FlipClock((relDate-currDate)/1000, {
+		clockFace: 'DailyCounter',
+		countdown: true,
+		showSeconds: showSeconds
+	});
 
-	// Update the count down every 1 second
-	var x = setInterval(function() {
+	$('.slick').slick({
+  dots: true,
+  infinite: true,
+  speed: 300,
+  slidesToShow: 4,
+  slidesToScroll: 1,
+    autoplay: true,
+  autoplaySpeed: 2000,
+	  variableWidth: true,
+		  centerMode: true,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        infinite: true,
+        dots: true
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
 
-	    // Get todays date and time
-	    var now = new Date().getTime();
-	    
-	    // Find the distance between now an the count down date
-	    var distance = countDownDate - now;
-	    
-	    // Time calculations for days, hours, minutes and seconds
-	    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-	    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-	    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-	    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-	    
-	    // Output the result in an element with id="demo"
-	    document.getElementById("demo").innerHTML = days + "d " + hours + "h "
-	    + minutes + "m " ;
-	    
-	    // If the count down is over, write some text 
-	    if (distance < 0) {
-	        clearInterval(x);
-	        document.getElementById("demo").innerHTML = "EXPIRED";
-	    }
-	}, 1000);
+  ]
+});
 </script>
 </body>
 
