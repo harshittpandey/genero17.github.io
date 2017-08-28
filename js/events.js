@@ -2,7 +2,7 @@
     function testAnim(x) {
         $('.modal .modal-dialog').attr('class', 'modal-dialog  ' + x + '  animated');
     };
-    const deptModals = ["#deptCSE"]
+    const deptModals = ["#deptCSE","#comingSoon"]
     deptModals.map(function (dept) {
         $(dept).on('show.bs.modal', function (e) {
             var anim = "swing";

@@ -14,6 +14,7 @@
     <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css" />
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/animatecss/3.5.2/animate.min.css" />
     <link rel="stylesheet" href="css/events.css">
+    <link rel="stylesheet" href="css/general.css">
 </head>
 
 <body>
@@ -29,7 +30,8 @@
                         <div class="row">
                             <div class="col-sm-2">
                                 <!--style="background:url(img/events/jack.png) no-repeat;background-size:100%;"-->
-                                <button type="button" style="font-size:5em;float:left;padding-left:1em;padding-top:0.5em;" class="close" data-dismiss="modal" aria-label="Close">
+                                <button type="button" style="font-size:5em;float:left;padding-left:1em;padding-top:0.5em;" class="close" data-dismiss="modal"
+                                    aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
                                         <!-- TODO:ADD SKULL + CROSSBONES instead of X -->
                                         </button>
@@ -120,11 +122,52 @@
             </div>
         </div>
     </div>
+    <div class="modal fade" id="comingSoon" tabindex="-1" role="dialog" aria-labelledby="comingSoon" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content" style="background:url(img/events/99.jpg);background-size:cover;">
+                <!-- <div class="modal-header"> -->
+                <!-- <h5 class="modal-title" id="exampleModalLabel">Modal title</h5> -->
+                <!-- </div> -->
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-sm-2">
+                                <!--style="background:url(img/events/jack.png) no-repeat;background-size:100%;"-->
+                                <button type="button" style="font-size:5em;float:left;padding-left:1em;padding-top:0.5em;" class="close" data-dismiss="modal"
+                                    aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                            <!-- TODO:ADD SKULL + CROSSBONES instead of X -->
+                                            </button>
+                                <img src="img/events/jack.png" class="align-bottom" style="width:100%;position:absolute;bottom:0;left:0" alt="JackSparrow">
+                            </div>
+                            <div class="col-sm-10">
+                                <div class="container-fluid noticeBody" style="background:url(img/events/final_parchment.png) no-repeat;background-size:cover;">
+                                    <div class="row" style="min-height:90vh;">
+                                        <div class="col-md-12 my-5 py-3">
+                                            <div class="tabbable" id="tabs-873309">
+                                                <div class="tab-content">
+                                                    <!-- TabContent -->
+                                                    <div class="tab-pane active" style="padding: 25% 30% 10% 40%" id="panel-780948">
+                                                        <h1>COMING SOON <br> Stay tuned ye' pile of slimey barnacles'</h1>
+                                                    </div>
+                                                    <!-- END:tab-content -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- END:deptCSE -->
     <div class="container-fluid" style="background-image:url('img/events/bg.jpg')">
         <!-- Navbar -->
         <nav style="background-color:rgba(0, 0, 0, 0.5);" class="navbar navbar-expand-lg">
-            <a class="navbar-brand" href="#">Navbar</a>
+            <a class="navbar-brand" href="/">Genero17</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                 aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -133,14 +176,14 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="/">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
+                        <a class="nav-link" href="#">Events<span class="sr-only">(current)</span></a>
                     </li>
-                    <li class="nav-item">
+                    <!-- <li class="nav-item">
                         <a class="nav-link disabled" href="#">Disabled</a>
-                    </li>
+                    </li> -->
                 </ul>
                 <form class="form-inline my-2 my-lg-0">
                     <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
@@ -151,28 +194,28 @@
         <!-- Navbar -->
         <!-- Carousel -->
         <div class="slick">
-            <div class="card" data-toggle="modal" data-target="#deptCSE">
+            <div class="card" data-toggle="modal" data-target="#comingSoon">
                 <img src="img/events/banners/boat7.png" alt="" class="card-img-top">
             </div>
-            <div class="card">
+            <div class="card" data-toggle="modal" data-target="#comingSoon">
                 <img src="img/events/banners/boat1.png" alt="" class="card-img-top">
             </div>
-            <div class="card">
+            <div class="card" data-toggle="modal" data-target="#comingSoon">
                 <img src="img/events/banners/boat2.png" alt="" class="card-img-top">
             </div>
-            <div class="card">
+            <div class="card" data-toggle="modal" data-target="#comingSoon">
                 <img src="img/events/banners/boat3.png" alt="" class="card-img-top">
             </div>
-            <div class="card">
+            <div class="card" data-toggle="modal" data-target="#comingSoon">
                 <img src="img/events/banners/boat4.png" alt="" class="card-img-top">
             </div>
-            <div class="card">
+            <div class="card" data-toggle="modal" data-target="#comingSoon">
                 <img src="img/events/banners/boat6.png" alt="" class="card-img-top">
             </div>
-            <div class="card">
+            <div class="card" data-toggle="modal" data-target="#comingSoon">
                 <img src="img/events/banners/boat9.png" alt="" class="card-img-top">
             </div>
-            <div class="card">
+            <div class="card" data-toggle="modal" data-target="#comingSoon">
                 <img src="img/events/banners/boat10.png" alt="" class="card-img-top">
             </div>
         </div>

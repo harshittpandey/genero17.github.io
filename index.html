@@ -20,7 +20,7 @@
 			  crossorigin="anonymous"></script>
 					<script src="js/flipclock.min.js"> </script>
 <script type="text/javascript" src="http://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="css/flipclock.css">
+	<link rel="stylesheet" type="text/css" href="css/general.css">
 	<!--[if IE]>
 		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
@@ -33,17 +33,12 @@
 
 
 		     h1{
-		   font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
 		   font-size:     30px;
 		   line-height:   0.8;
 		   color: #2D2D2D;
 		   font-weight:   100; 
 		  }
-		    .w3-allerta {
-         font-family: "Allerta Stencil", Sans-serif;
-         }
 		 .subtitle {
-    font-family: 'Dancing Script', cursive;
 	font-size: 5vh;
 		 }
 		 .timer{
@@ -87,7 +82,13 @@
 			}
     .flip-clock-divider .flip-clock-label {
 
-    color:transparent; }
+		color:transparent; }
+		.midAlign {
+    font-size: 2rem;
+    text-align: center;
+    vertical-align: middle;
+    align-items: stretch;
+}
 	</style>
 </head>
 
@@ -102,7 +103,16 @@
 		<div class="intro" style="text-align:left;">
 			<h2 class="intro__title ">Genero 2k17</h2>
 						<h1 class="subtitle" style="color: white;text-align:justify">Some Sails never End</h1>
-			<div class="timer" align="center">
+			<!-- <div class="timer" align="center"> -->
+					<button type="button" style="display:flex;background-color:transparent;border:0;" class="btn btn-lg">
+						<a href="events">
+						<img src="img/cross.png" style="height:5vh;" alt="">
+						<div class="midAlign" style="padding-top:1vw;color:cornflowerblue">
+								Ye dare enter th' pirate cove !
+						</div>
+					</a>
+					</button>
+				
 			</div>
 		</div>
 		
@@ -129,19 +139,19 @@
 	<!-- /container -->
 	<script src="js/water.js"></script>
 <script>
-	var currDate = new Date();
-	var relDate = new Date("2017-08-15");
-	var showSeconds = true;
-	const mq = window.matchMedia( "only screen and (max-width: 768px)" );
-	if(mq.matches === true)
-		showSeconds=false;
-	console.log(showSeconds)
-	var csClass = {"color":"white"};
-	var clock = $('.timer').FlipClock((relDate-currDate)/1000, {
-		clockFace: 'DailyCounter',
-		countdown: true,
-		showSeconds: showSeconds
-	});
+	// var currDate = new Date();
+	// var relDate = new Date("2017-08-15");
+	// var showSeconds = true;
+	// const mq = window.matchMedia( "only screen and (max-width: 768px)" );
+	// if(mq.matches === true)
+	// 	showSeconds=false;
+	// console.log(showSeconds)
+	// var csClass = {"color":"white"};
+	// var clock = $('.timer').FlipClock((relDate-currDate)/1000, {
+	// 	clockFace: 'DailyCounter',
+	// 	countdown: true,
+	// 	showSeconds: showSeconds
+	// });
 
 	$('.slick').slick({
   dots: true,
