@@ -1,118 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M"
+        crossorigin="anonymous">
     <!-- slick-css -->
     <link rel="stylesheet" type="text/css" href="css/slick-theme.css" />
-    <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/animatecss/3.5.2/animate.min.css"/>
-  </head>
-  <style>
-    .container-fluid {
-         padding:0;
-         min-height: 100vh;
-    }
-    .card-img-top{
-        height: 85vh;
-    }
-    .card{
-        transition: transform .5s;
-        margin: 2.5em;
-        border-width: 0px;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    }
-    .card:hover{
-        transform: scale3d(1.01, 1.01, 1);
-    }
-    .card::after{
-        transition: box-shadow .5s;
-        content: '';
-    display: block;
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    }
-    .card:hover::after{
-        /* CSS BOX SHADOW */
-        /* box-shadow: inset 0px 25px 100px 150px rgba(0,0,1000,0.6); */
+    <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/animatecss/3.5.2/animate.min.css" />
+    <link rel="stylesheet" href="css/events.css">
+</head>
 
-    }
-    /* .clip-1{
-        -webkit-clip-path: polygon(14% 0, 65% 0, 65% 100%, 14% 100%);
-        clip-path: polygon(14% 0, 65% 0, 65% 100%, 14% 100%);
-    } */
-    /* bootstrap fullscreen modal */
-    .modal-dialog {
-        width: 100%;
-        height: 100%;
-        margin: 0;
-        padding: 0;
-        max-width: 100vw;
-    }
-    .modal-header ,.modal-footer{
-        border:0;
-    }
-    .modal-content {
-        height: auto;
-        min-height: 100%;
-        border-radius: 0;
-    }
-  </style>
-  <body>
+<body>
+    <!-- MODAL:deptCSE -->
     <div class="modal fade" id="deptCSE" tabindex="-1" role="dialog" aria-labelledby="deptCSE" aria-hidden="true">
         <div class="modal-dialog" role="document">
-          <div class="modal-content" style="background:url(img/events/wood.png);background-size:100%;">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <!-- <span aria-hidden="true">&times;</span> -->
-              </button>
+            <div class="modal-content" style="background:url(img/events/99.jpg);background-size:cover;">
+                <!-- <div class="modal-header"> -->
+                <!-- <h5 class="modal-title" id="exampleModalLabel">Modal title</h5> -->
+                <!-- </div> -->
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-sm-2">
+                                <!--style="background:url(img/events/jack.png) no-repeat;background-size:100%;"-->
+                                <button type="button" style="font-size:5em;float:left;padding-left:1em;padding-top:0.5em;" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                        <!-- TODO:ADD SKULL + CROSSBONES instead of X -->
+                                        </button>
+                                <img src="img/events/jack.png" class="align-bottom" style="width:100%;position:absolute;bottom:0;left:0" alt="JackSparrow">
+                            </div>
+                            <div class="col-sm-10">
+                                <div class="container-fluid noticeBody" style="background:url(img/events/final_parchment.png) no-repeat;background-size:cover;">
+                                    <div class="row" style="max-height:90vh;">
+                                        <div class="col-md-3 tabbable">
+                                            <ul class="nav nav-tabs flex-column h-100 my-5" style="max-height:85vh;overflow-y:auto;flex-wrap:nowrap;direction:rtl;">
+                                                <!-- Tab1 -->
+                                                <li class="nav-item flag" style="border:0;background:url(img/events/rectflag.png) no-repeat;background-size:100% 100%;">
+                                                    <a class="nav-link h-100 w-100" style="display:flex;" href="#panel-780948" data-toggle="tab">
+                                                        <div class="midAlign">
+                                                            Duel of the Geek Freaks
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <!-- END:Tab1 -->
+                                                <li class="nav-item flag" style="border:0;background:url(img/events/rectflag.png) no-repeat;background-size:100% 100%;">
+                                                    <a class="nav-link h-100 w-100" style="display:flex;" href="#panel-701533" data-toggle="tab">
+                                                        <div class="midAlign">
+                                                            Duel of the Geek Freaks
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li class="nav-item flag" style="border:0;background:url(img/events/rectflag.png) no-repeat;background-size:100% 100%;">
+                                                    <a class="nav-link h-100 w-100" style="display:flex;" href="#panel-780948" data-toggle="tab">
+                                                        <div class="midAlign">
+                                                            Duel of the Geek Freaks
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li class="nav-item flag" style="border:0;background:url(img/events/rectflag.png) no-repeat;background-size:100% 100%;">
+                                                    <a class="nav-link h-100 w-100" style="display:flex;" href="#panel-780948" data-toggle="tab">
+                                                        <div class="midAlign">
+                                                            Duel of the Geek Freaks
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li class="nav-item flag" style="border:0;background:url(img/events/rectflag.png) no-repeat;background-size:100% 100%;">
+                                                    <a class="nav-link h-100 w-100" style="display:flex;" href="#panel-780948" data-toggle="tab">
+                                                        <div class="midAlign">
+                                                            Duel of the Geek Freaks
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li class="nav-item flag" style="border:0;background:url(img/events/rectflag.png) no-repeat;background-size:100% 100%;">
+                                                    <a class="nav-link h-100 w-100" style="display:flex;" href="#panel-780948" data-toggle="tab">
+                                                        <div class="midAlign">
+                                                            Duel of the Geek Freaks
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li class="nav-item flag" style="border:0;background:url(img/events/rectflag.png) no-repeat;background-size:100% 100%;">
+                                                    <a class="nav-link h-100 w-100" style="display:flex;" href="#panel-780948" data-toggle="tab">
+                                                        <div class="midAlign">
+                                                            Duel of the Geek Freaks
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-md-9 my-5 py-3">
+                                            <div class="tabbable" id="tabs-873309">
+                                                <div class="tab-content">
+                                                    <!-- TabContent -->
+                                                    <div class="tab-pane" id="panel-780948">
+                                                        <p>
+                                                            I'm in Section 1.
+                                                        </p>
+                                                    </div>
+                                                    <!-- END:tab-content -->
+                                                    <div class="tab-pane active" id="panel-701553">
+                                                        <p>
+                                                            Howdy, I'm in Section 2.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="modal-body" >
-              <div class="container-fluid">
-                  <div class="row">
-                      <div class="col-sm-2"></div>
-                      <div class="col-sm-10" style="height:90vh; background:url(img/events/final_parchment.png) no-repeat;background-size:cover;"></div>
-                  </div>
-              </div>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Save changes</button>
-            </div>
-          </div>
         </div>
-      </div>
-    <div class="container-fluid" style="background-image:url('images/events_bg.jpg')">
-          <!-- Navbar -->
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    </div>
+    <!-- END:deptCSE -->
+    <div class="container-fluid" style="background-image:url('img/events/bg.jpg')">
+        <!-- Navbar -->
+        <nav style="background-color:rgba(0, 0, 0, 0.5);" class="navbar navbar-expand-lg">
             <a class="navbar-brand" href="#">Navbar</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            
+
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled" href="#">Disabled</a>
-                </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#">Disabled</a>
+                    </li>
                 </ul>
                 <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                    <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
                 </form>
             </div>
         </nav>
@@ -120,93 +152,43 @@
         <!-- Carousel -->
         <div class="slick">
             <div class="card" data-toggle="modal" data-target="#deptCSE">
-                <img src="images/dept1_closed.jpg" alt="" class="card-img-top">
+                <img src="img/events/banners/boat7.png" alt="" class="card-img-top">
             </div>
             <div class="card">
-                <img src="images/dept1_closed.jpg" alt="" class="card-img-top">
+                <img src="img/events/banners/boat1.png" alt="" class="card-img-top">
             </div>
             <div class="card">
-                <img src="images/dept1_closed.jpg" alt="" class="card-img-top">
+                <img src="img/events/banners/boat2.png" alt="" class="card-img-top">
             </div>
             <div class="card">
-                <img src="images/dept1_closed.jpg" alt="" class="card-img-top">
+                <img src="img/events/banners/boat3.png" alt="" class="card-img-top">
             </div>
             <div class="card">
-                <img src="images/dept1_closed.jpg" alt="" class="card-img-top">
+                <img src="img/events/banners/boat4.png" alt="" class="card-img-top">
             </div>
             <div class="card">
-                <img src="images/dept1_closed.jpg" alt="" class="card-img-top">
+                <img src="img/events/banners/boat6.png" alt="" class="card-img-top">
             </div>
             <div class="card">
-                <img src="images/dept1_closed.jpg" alt="" class="card-img-top">
+                <img src="img/events/banners/boat9.png" alt="" class="card-img-top">
             </div>
             <div class="card">
-                <img src="images/dept1_closed.jpg" alt="" class="card-img-top">
+                <img src="img/events/banners/boat10.png" alt="" class="card-img-top">
             </div>
         </div>
         <!-- Carousel -->
     </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1"
+        crossorigin="anonymous"></script>
     <!-- slickJs -->
-    <script type="text/javascript" src="http://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>    
-    <script>
-        // ModalJS
-        function testAnim(x) {
-            $('.modal .modal-dialog').attr('class', 'modal-dialog  ' + x + '  animated');
-        };
-        const deptModals = ["#deptCSE"]
-        deptModals.map(function(dept){
-            $(dept).on('show.bs.modal', function (e) {
-                var anim = "swing";
-                testAnim(anim);
-            })
-            $(dept).on('hide.bs.modal', function (e) {
-                var anim = "flipOutX";
-                testAnim(anim);
-            })
-        })
-        // ModalJS
-        $('.slick').slick({
-            dots: true,
-            infinite: true,
-            speed: 300,
-            slidesToShow: 4,
-            slidesToScroll: 1,
-            arrows:false,
-            dots: false,
-            responsive: [
-                    {
-                    breakpoint: 1024,
-                    settings: {
-                        slidesToShow: 4,
-                        slidesToScroll: 1,
-                        infinite: true,
-                        dots: true
-                    }
-                    },
-                    {
-                    breakpoint: 600,
-                    settings: {
-                        slidesToShow: 2,
-                        slidesToScroll: 1
-                    }
-                    },
-                    {
-                    breakpoint: 480,
-                    settings: {
-                        slidesToShow: 1,
-                        slidesToScroll: 1
-                    }
-                    }
+    <script type="text/javascript" src="http://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+    <script src="js/events.js"></script>
+</body>
 
-                ]
-            });
-            var img1 = new Image();
-			img1.src = "/img/events/wood.png";
-    </script>
-  </body>
 </html>
