@@ -99,6 +99,7 @@
 </head>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/4.5.1/pixi.min.js"></script>
 <script src="js/pixi-filter.js"></script>
+
 <body class="demo-4">
 	<div class="container">
 		<div class="wrap">
@@ -152,7 +153,12 @@
 		var app = new PIXI.Application($(window).innerWidth(), $(window).innerHeight());
 		document.body.appendChild(app.view);
 		document.getElementById('bg').appendChild(app.view)
+		var video = document.createElement("video");
+		video.preload = "auto";
+		video.loop = true;              // enable looping
+		video.src = "img/landing.webm";
 		var filter = new PIXI.filters.BlurFilter();
+		filter.autoFit = true;
 		app.stage.filters = [filter]
 		function onPlayVideo() {
 
@@ -160,11 +166,10 @@
 			// button.destroy();
 
 			// create a video texture from a path
-			var texture = PIXI.Texture.fromVideo('img/landing.webm');
+			var texture = PIXI.Texture.fromVideo(video);
 
 			// create a new Sprite using the video texture (yes it's that easy)
 			var videoSprite = new PIXI.Sprite(texture);
-
 			// Stetch the fullscreen
 			videoSprite.width = app.renderer.width;
 			videoSprite.height = app.renderer.height;
