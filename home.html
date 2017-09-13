@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Genero17</title>
+    <link rel="stylesheet" href="css/home.css">
+    <script src="js/snap.svg-min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js"></script>
+    <script src="js/animation.gsap.js"></script>
+    <script>
+        function convertToBezier(pathId) {
+            var data = Snap.path.toCubic(document.getElementById(pathId).getAttribute('d'))
+            dataLength = data.length,
+                points = [], //holds our series of x/y values for anchors and control points,
+                pointsString = data.toString();
+
+            // convert cubic data to GSAP bezier
+            for (var i = 0; i < dataLength; i++) {
+                var seg = data[i];
+                if (seg[0] === "M") { // move (starts the path)
+                    var point = {};
+                    point.x = seg[1];
+                    point.y = seg[2];
+                    points.push(point);
+                } else { // seg[0] === "C" (Snap.path.toCubic should return only curves after first point)
+                    for (var j = 1; j < 6; j += 2) {
+                        var point = {};
+                        point.x = seg[j];
+                        point.y = seg[j + 1];
+                        points.push(point);
+                    }
+                }
+            }
+            bezier = { type: "cubic", values: points, autoRotate: true }
+            return bezier;
+        }
+        window.onload = function () {
+            var controller = new ScrollMagic.Controller();
+
+            var tween = new TimelineMax()
+                .add(TweenMax.to(document.getElementById("boat"), 10, { css: { bezier: convertToBezier("boatPath") } }))
+
+            var scene = new ScrollMagic.Scene({ triggerElement: "#beach" })
+                .setPin("#target")
+                .setTween(tween)
+                .addIndicators()
+                .addTo(controller);
+        }
+    </script>
+</head>
+
+<body>
+    <div class="menu">
+        <ul>
+
+            <li class="menuItem">
+                <a href="/events">
+                    <object data="img/eventFlag.svg" type="image/svg+xml"></object>
+                </a>
+            </li>
+            <li class="menuItem">
+                <a href="/events">
+                    <object data="img/eventFlag.svg" type="image/svg+xml"></object>
+                </a>
+            </li>
+            <li class="menuItem">
+                <a href="/events">
+                    <object data="img/eventFlag.svg" type="image/svg+xml"></object>
+                </a>
+            </li>
+            <li class="menuItem">
+                <a href="/events">
+                    <object data="img/eventFlag.svg" type="image/svg+xml"></object>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="container">
+        <div class="sky">
+            <object type="image/svg+xml" class="sun" data="img/home/sun.svg"></object>
+            <object type="image/svg+xml" class="tree_left_up" data="img/home/tree_up.svg"></object>
+            <object type="image/svg+xml" class="tree_left_down" data="img/home/tree_down.svg"></object>
+            <object type="image/svg+xml" class="tree_right_up" data="img/home/tree_up.svg"></object>
+            <object type="image/svg+xml" class="tree_right_down" data="img/home/tree_down.svg"></object>
+            <object data="img/home/clouds.png" class="clouds" type="image/png"></object>
+            <object data="img/home/ship_path.svg" type="image/svg+xml" class="shipPath"></object>
+            <object data="img/home/ship.svg" type="image/svg+xml" class="ship"></object>
+        </div>
+        <div class="water">
+            <object data="img/home/water0.svg" class="water w0" type="image/svg+xml"></object>
+            <object data="img/home/water1.svg" class="water w1" type="image/svg+xml"></object>
+            <object data="img/home/water2.svg" class="water w2" type="image/svg+xml"></object>
+            <object data="img/home/water3.svg" class="water w3" type="image/svg+xml"></object>
+            <object data="img/home/rocks.svg" class="land" type="image/svg+xml"></object>
+        </div>
+    </div>
+    <!-- <div class="container">
+        <div class="beach">
+            <object data="img/home/beach/wave.svg" type="image/svg+xml"></object>
+            <object data="img/home/beach/boat.svg" type="image/svg+xml" class="boat" id="boat"></object>
+            <svg id="thePath" class="wavePath" version="1.1" viewBox="0 0 336.08646 286.86896" height="286.86896mm" width="336.08646mm">
+                <defs id="defs28" />
+                <g transform="translate(16.096804,-46.220283)" id="layer1">
+                    <path id="boatPath" d="M 157.19937,46.348716 C -28.870821,92.302149 3.517827,110.24461 3.517827,110.24461 c 0,0 124.031593,37.00257 138.547833,39.20851 14.51624,2.20595 184.37419,-2.66049 177.59506,30.75619 -6.77915,33.41668 2.0153,33.57634 -15.64203,39.58811 -17.65737,6.01178 -115.18499,-1.1828 -226.875335,30.25928 -111.690336,31.44208 -91.722766,51.31678 -91.722766,51.31678 0,0 37.22251,34.65977 111.675677,27.77147 74.453164,-6.88829 90.872314,3.83352 90.872314,3.83352"
+                        style="fill:none;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                    />
+                </g>
+            </svg>
+            <div id="target" style="position:absolute;top:0;">
+                <h1>Hello</h1>
+            </div>
+        </div>
+    </div> -->
+    <script src="js/anime.js"></script>
+    <!-- TODO AUDIO -->
+    <!-- <embed loop="true" src="audio/compAudio.mp3" hidden="true" type="audio/mpeg"></embed> -->
+</body>
+<script>
+        anime({
+            targets: ".w0,.w1,.w2",
+            translateY: '-3rem',
+            duration: function (target) {
+                // Duration based on every div 'data-duration' attribute
+                return anime.random(1000, 2000);
+            },
+            delay: function (target, index) {
+                // 100ms delay multiplied by every div index, in ascending order
+                return index * 100;
+            },
+            elasticity: function (target, index, totalTargets) {
+                // Elasticity multiplied by every div index, in descending order
+                return 200 + ((totalTargets - index) * 200);
+            },
+            direction: 'alternate',
+            loop: true,
+            easing: 'easeInQuint'
+        });
+        anime({
+            targets: ".w3",
+            translateY: '-2rem',
+            // scale: [.75, .9],
+            delay: function (el, index) {
+                return anime.random(40, 100);
+            },
+            direction: 'alternate',
+            loop: true,
+            easing: 'easeInQuint'
+        });
+        anime({
+            targets: ".ship",
+            translateY: '-2rem',
+            // scale: [.75, .9],
+            delay: function (el, index) {
+                return anime.random(40, 100);
+            },
+            direction: 'alternate',
+            loop: true,
+            easing: 'easeInQuint'
+        });
+        var shipTimeLine = anime.timeline({
+            direction: 'alternate',
+            loop: true
+        });
+        shipTimeLine
+            .add({
+                targets: ".ship",
+                rotate: [{ value: 5 }, { value: -5 }],
+                duration: 4000,
+                easing: 'easeInOutQuint'
+            })
+    // var path = anime.path('#svg21');
+    // anime({
+    //     targets: '.ship',
+    //     translateX: path,
+    //     translateY: path,
+    //     rotate: path,
+    //     duration: 3000,
+    //     loop: true,
+    //     easing: 'linear'
+    // });
+
+</script>
+
+</html>
