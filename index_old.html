@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Genero17</title>
+</head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M"
+ crossorigin="anonymous">
+<style>
+	body {
+		background: url("img/home/background.jpg") no-repeat;
+		background-size: cover;
+	}
+
+	.centerFlex {
+		align-items: center;
+		display: flex;
+		justify-content: center;
+		min-height: 99vh;
+	}
+
+	.skull-container {
+		margin-left: 50vw;
+		margin-right: 50vw;
+	}
+
+	.flipImg {
+		-moz-transform: scaleX(-1);
+		-o-transform: scaleX(-1);
+		-webkit-transform: scaleX(-1);
+		transform: scaleX(-1);
+		filter: FlipH;
+		-ms-filter: "FlipH";
+	}
+
+	.hidden {
+		visibility: hidden;
+	}
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" integrity="sha256-j+P6EZJVrbXgwSR5Mx+eCS6FvP9Wq27MBRC/ogVriY0="
+ crossorigin="anonymous" />
+
+<body>
+	<div class="centerFlex">
+		<div class="d-flex p-2">
+			<div class="centerFlex flex-row d-flex justify-content-around">
+				<div class="hidden animated" id="leftList" class="p-2" style="margin-right:5vw;">
+					<div class="flex-row">
+						<h3>Events
+						</h3>
+						<img src="img/home/sword.svg" width=100 alt="">
+					</div>
+					<div class="flex-row">
+						<h3>Events
+						</h3>
+						<img src="img/home/sword.svg" width=100 alt="">
+					</div>
+					<div class="flex-row">
+						<h3>Events
+						</h3>
+						<img src="img/home/sword.svg" width=100 alt="">
+					</div>
+					<div class="flex-row">
+						<h3>Events
+						</h3>
+						<img src="img/home/sword.svg" width=100 alt="">
+					</div>
+				</div>
+				<div class="p-2" class="skull-container">
+					<img id="skull" class="animated infinite pulse" src="img/home/web skull.svg" height=500 alt="">
+					<h1 class="" style="text-align:center">
+						Genero17
+					</h1>
+				</div>
+				<div id="rightList" class="p-2 hidden animated" style="margin-left:5vw;">
+					<div class="flex-row">
+						<h3>ContactUs</h3>
+						<img class="center flipImg" width=100 src="img/home/sword.svg" alt="">
+					</div>
+					<div class="flex-row">
+						<h3>ContactUs</h3>
+						<img class="center flipImg" width=100 src="img/home/sword.svg" alt="">
+					</div>
+					<div class="flex-row">
+						<h3>ContactUs</h3>
+						<img class="center flipImg" width=100 src="img/home/sword.svg" alt="">
+					</div>
+					<div class="flex-row">
+						<h3>ContactUs</h3>
+						<img class="center flipImg" width=100 src="img/home/sword.svg" alt="">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+	 crossorigin="anonymous"></script>
+</body>
+<script>
+	$("#skull").click(function () {
+		$("#skull").toggleClass('swing')
+		$("#leftList").toggleClass('hidden')
+		$("#leftList").toggleClass('fadeInDown')
+		setTimeout(function () {
+			$("#rightList").toggleClass('hidden')
+			$("#rightList").toggleClass('fadeInDown')
+			$("#skull").toggleClass('swing')
+			$("#skull").toggleClass('shake')
+		}, 1000)
+		setTimeout(function () {
+			$("#skull").toggleClass('shake')
+		}, 2000)
+		$("#skull").unbind("click")
+	})
+
+</script>
+
+</html>
