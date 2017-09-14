@@ -7,11 +7,13 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Genero17</title>
     <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/aos.css">
     <script src="js/snap.svg-min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js"></script>
     <script src="js/animation.gsap.js"></script>
+    <script src="js/aos.js"></script>
     <script>
         function convertToBezier(pathId) {
             var data = Snap.path.toCubic(document.getElementById(pathId).getAttribute('d'))
@@ -40,16 +42,17 @@
             return bezier;
         }
         window.onload = function () {
-            var controller = new ScrollMagic.Controller();
+            AOS.init();
+        //     var controller = new ScrollMagic.Controller();
 
-            var tween = new TimelineMax()
-                .add(TweenMax.to(document.getElementById("boat"), 10, { css: { bezier: convertToBezier("boatPath") } }))
+        //     var tween = new TimelineMax()
+        //         .add(TweenMax.to(document.getElementById("boat"), 10, { css: { bezier: convertToBezier("waveSVG") } }))
 
-            var scene = new ScrollMagic.Scene({ triggerElement: "#beach" })
-                .setPin("#target")
-                .setTween(tween)
-                .addIndicators()
-                .addTo(controller);
+        //     var scene = new ScrollMagic.Scene({ triggerElement: "#beach" })
+        //         .setPin("#target")
+        //         .setTween(tween)
+        //         .addIndicators()
+        //         .addTo(controller);
         }
     </script>
 </head>
@@ -82,6 +85,7 @@
     </div>
     <div class="container">
         <div class="sky">
+            <object data="img/logo.svg" type="image/svg+xml" class="logo"></object>
             <object type="image/svg+xml" class="sun" data="img/home/sun.svg"></object>
             <object type="image/svg+xml" class="tree_left_up" data="img/home/tree_up.svg"></object>
             <object type="image/svg+xml" class="tree_left_down" data="img/home/tree_down.svg"></object>
@@ -101,20 +105,39 @@
     </div>
     <div class="container">
         <div class="beach">
-            <object data="img/home/beach/wave.svg" type="image/svg+xml"></object>
+            <object style="position:absolute;top:0" data="img/home/beach/wave.svg" type="image/svg+xml">
+                <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080"><defs><style>.cls-1{fill:#62c6e5;}</style></defs><title>wave</title><path id="waveSVG" class="cls-1" d="M498.95,192.09c0-58,257-138.32,610.88-138.32C1416.09,53.77,1611.72,0,1611.72,0H557.57C289,24.31,97.22,68.24,0,122.29V286C117.7,344.71,379.82,393.72,798.41,429c442.39,38.69,612.54,75.77,612.54,143.47,0,52.24-41.08,47.67-311.95,64.48-76.52.83-222,6-222,6-262.77,12.15-530.93,94.48-674.9,133.12C102.07,803,33.45,834.73,0,869.39v95.29c46.34,43.26,161.81,82.15,350.47,115.32h1217q-167.3-24.59-393.06-44.65C745.61,996.66,649,967.47,649,903c0-51.08,52.09-94.48,330-104.2h0.09c58.53,0,111-.64,158.6-1.88,299.36-7.78,403.33-39,584.26-80.73,86.59-20,153.07-43.32,198.09-69.35V472.28c-117.71-65.61-384.36-111-794.9-148C696.32,285.59,498.95,256.57,498.95,192.09Z"/></svg>
+            </object>
             <object data="img/home/beach/boat.svg" type="image/svg+xml" class="boat" id="boat"></object>
-            <svg id="thePath" class="wavePath" version="1.1" viewBox="0 0 336.08646 286.86896" height="286.86896mm" width="336.08646mm">
+            <!-- <svg id="thePath" class="wavePath" version="1.1" viewBox="0 0 336.08646 286.86896" height="286.86896mm" width="336.08646mm">
                 <defs id="defs28" />
                 <g transform="translate(16.096804,-46.220283)" id="layer1">
                     <path id="boatPath" d="M 157.19937,46.348716 C -28.870821,92.302149 3.517827,110.24461 3.517827,110.24461 c 0,0 124.031593,37.00257 138.547833,39.20851 14.51624,2.20595 184.37419,-2.66049 177.59506,30.75619 -6.77915,33.41668 2.0153,33.57634 -15.64203,39.58811 -17.65737,6.01178 -115.18499,-1.1828 -226.875335,30.25928 -111.690336,31.44208 -91.722766,51.31678 -91.722766,51.31678 0,0 37.22251,34.65977 111.675677,27.77147 74.453164,-6.88829 90.872314,3.83352 90.872314,3.83352"
                         style="fill:none;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
                     />
                 </g>
-            </svg>
-            <div id="target" style="position:absolute;top:0;">
-                <h1>Hello</h1>
+            </svg> -->
+            <div id="target" style="position:absolute;top:0;"></div>
+                <object data-aos-easing="ease-in-quad" data-aos-duration="750" data-aos="flip-up" style="
+                position:absolute;
+                top:5vh;
+                right:10vw;
+                height:30vh;
+                " data="img/home/events.png" type="image/png">
+                </object>
+                <object
+                data-aos-duration="1500"
+                data-aos-delay="500"
+                data-aos="flip-left"
+                style="
+                position:absolute;
+                bottom:24vh;
+                left:7vw;
+                height:32vh;
+                " data="img/home/concert.png" type="image/png">
+                </object>
             </div>
-        </div>
+  
     </div>
     <script src="js/anime.js"></script>
     <!-- TODO AUDIO -->
