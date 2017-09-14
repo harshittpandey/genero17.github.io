@@ -43,16 +43,16 @@
         }
         window.onload = function () {
             AOS.init();
-        //     var controller = new ScrollMagic.Controller();
+            //     var controller = new ScrollMagic.Controller();
 
-        //     var tween = new TimelineMax()
-        //         .add(TweenMax.to(document.getElementById("boat"), 10, { css: { bezier: convertToBezier("waveSVG") } }))
+            //     var tween = new TimelineMax()
+            //         .add(TweenMax.to(document.getElementById("boat"), 10, { css: { bezier: convertToBezier("waveSVG") } }))
 
-        //     var scene = new ScrollMagic.Scene({ triggerElement: "#beach" })
-        //         .setPin("#target")
-        //         .setTween(tween)
-        //         .addIndicators()
-        //         .addTo(controller);
+            //     var scene = new ScrollMagic.Scene({ triggerElement: "#beach" })
+            //         .setPin("#target")
+            //         .setTween(tween)
+            //         .addIndicators()
+            //         .addTo(controller);
         }
     </script>
 </head>
@@ -88,15 +88,15 @@
             <object data="img/logo.svg" type="image/svg+xml" class="logo"></object>
             <object type="image/svg+xml" class="sun" data="img/home/sun.svg"></object>
             <object type="image/svg+xml" class="tree_left_up" data="img/home/tree_up.svg"></object>
-            <object type="image/svg+xml" class="tree_left_down" data="img/home/tree_down.svg"></object>
+            <object style="transform-origin:bottom;" type="image/svg+xml" id="tree_left_down" class="tree_left_down" data="img/home/tree_down.svg"></object>
             <object type="image/svg+xml" class="tree_right_up" data="img/home/tree_up.svg"></object>
-            <object type="image/svg+xml" class="tree_right_down" data="img/home/tree_down.svg"></object>
+            <object type="image/svg+xml" style="transform-origin:bottom;" id="tree_right_down" class="tree_right_down" data="img/home/tree_right_down.svg"></object>
             <object data="img/home/clouds.png" class="clouds" type="image/png"></object>
             <object data="img/home/ship_path.svg" type="image/svg+xml" class="shipPath"></object>
             <object data="img/home/ship.svg" type="image/svg+xml" class="ship"></object>
         </div>
         <div class="water">
-            <object data="img/home/water0.svg" class="water w0" type="image/svg+xml"></object>
+            <!-- <object data="img/home/water0.svg" class="water w0" type="image/svg+xml"></object> -->
             <object data="img/home/water1.svg" class="water w1" type="image/svg+xml"></object>
             <object data="img/home/water2.svg" class="water w2" type="image/svg+xml"></object>
             <object data="img/home/water3.svg" class="water w3" type="image/svg+xml"></object>
@@ -118,26 +118,22 @@
                 </g>
             </svg> -->
             <div id="target" style="position:absolute;top:0;"></div>
-                <object data-aos-easing="ease-in-quad" data-aos-duration="750" data-aos="flip-up" style="
+            <object data-aos-easing="ease-in-quad" data-aos-duration="750" data-aos="flip-up" style="
                 position:absolute;
                 top:5vh;
                 right:10vw;
                 height:30vh;
                 " data="img/home/events.png" type="image/png">
                 </object>
-                <object
-                data-aos-duration="1500"
-                data-aos-delay="500"
-                data-aos="flip-left"
-                style="
+            <object data-aos-duration="1500" data-aos-delay="500" data-aos="flip-left" style="
                 position:absolute;
                 bottom:24vh;
                 left:7vw;
                 height:32vh;
                 " data="img/home/concert.png" type="image/png">
                 </object>
-            </div>
-  
+        </div>
+
     </div>
     <script src="js/anime.js"></script>
     <!-- TODO AUDIO -->
@@ -196,6 +192,23 @@
                 duration: 4000,
                 easing: 'easeInOutQuint'
             })
+        anime({
+            targets: "#tree_left_down",
+            rotate: [{ value: -3 }, { value: 0 }],
+            duration: 2000,
+            direction: 'alternate',
+            loop: true,
+            easing: 'easeInOutCubic'
+        })
+        anime({
+            targets: "#tree_right_down",
+            rotate: [{ value: 3 }, { value: 0 }],
+            duration: 2000,
+            direction: 'alternate',
+            loop: true,
+            easing: 'easeInOutCubic',
+            delay:anime.random(50,200)
+        })
     // var path = anime.path('#svg21');
     // anime({
     //     targets: '.ship',
