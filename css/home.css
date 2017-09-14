@@ -126,7 +126,7 @@ body{
 .land{
     position: absolute;
     bottom: 0;
-    z-index: 999;
+    z-index: 99999;
     width: 100vw;
 }
 .ship{
@@ -142,7 +142,7 @@ body{
     width:5vw;
 }
 .beach{
-    /* background-image: url("../img/home/beach/bg.svg"); */
+    background-image:url("../img/home/beach/beach.png");
     background-size: cover;    
     position: absolute;
     height:100vh;
