@@ -35,6 +35,7 @@
      inkscape:window-y="0"
      inkscape:window-maximized="1"
      inkscape:current-layer="svg717" />
+
   <defs
      id="defs711" />
   <metadata
@@ -49,6 +50,8 @@
       </cc:Work>
     </rdf:RDF>
   </metadata>
+         <a href="http://genero17.in/events"
+      target="_blank">
   <g
      transform="translate(127.34561,-132.1168)"
      id="layer1">
@@ -113,4 +116,5 @@
        x="34.297756"
        y="24.729551"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18.06359863px;font-family:Caribbean;-inkscape-font-specification:Caribbean;stroke-width:0.2419232;fill:#f9f9f9">Events</tspan></text>
+</a>
 </svg>

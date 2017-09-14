@@ -15,6 +15,7 @@ ul,li{
 .menuItem>a>object{
     height:5vw;
 }
+
 .menuItem:hover{
     transform: translateX(20%);
 }
