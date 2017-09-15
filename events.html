@@ -1,258 +1,409 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
 
 <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Genero2k17</title>
+	<meta name="description" content="Card Expansion Effect with SVG clipPath" />
+	<meta name="keywords" content="clipPath, svg, effect, layout, expansion, images, grid, polygon" />
+	<meta name="author" content="Claudio Calautti for Codrops" />
+	<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.3.0/css/font-awesome.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/demo.css" />
+	<link rel="stylesheet" type="text/css" href="css/card.css" />
+	<link rel="stylesheet" type="text/css" href="css/pattern.css" />
+    <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M"
-        crossorigin="anonymous">
-    <!-- slick-css -->
-    <link rel="stylesheet" type="text/css" href="css/slick-theme.css" />
-    <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css" />
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/animatecss/3.5.2/animate.min.css" />
-    <link rel="stylesheet" href="css/events.css">
-    <link rel="stylesheet" href="css/general.css">
+	<!--[if IE]>
+	  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+	<style type="text/css">
+		body{
+			background-image: url("img/m.jpg"); 
+		}
+	</style>
+	<script>
+	if (navigator.userAgent.toLowerCase().indexOf('firefox') > -1) {
+		var root = document.getElementsByTagName('html')[0];
+		root.setAttribute('class', 'ff');
+	};
+	</script>
 </head>
 
-<body>
-    <!-- MODAL:deptCSE -->
-    <div class="modal fade" id="deptCSE" tabindex="-1" role="dialog" aria-labelledby="deptCSE" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content" style="background:url(img/events/99.jpg);background-size:cover;">
-                <!-- <div class="modal-header"> -->
-                <!-- <h5 class="modal-title" id="exampleModalLabel">Modal title</h5> -->
-                <!-- </div> -->
-                <div class="modal-body">
-                    <div class="container-fluid">
-                        <div class="row">
-                            <div class="col-sm-2">
-                                <!--style="background:url(img/events/jack.png) no-repeat;background-size:100%;"-->
-                                <button type="button" style="font-size:5em;float:left;padding-left:1em;padding-top:0.5em;" class="close" data-dismiss="modal"
-                                    aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                        <!-- TODO:ADD SKULL + CROSSBONES instead of X -->
-                                        </button>
-                                <img src="img/events/jack.png" class="align-bottom" style="width:100%;position:absolute;bottom:0;left:0" alt="JackSparrow">
-                            </div>
-                            <div class="col-sm-10">
-                                <div class="container-fluid noticeBody" style="background:url(img/events/final_parchment.png) no-repeat;background-size:cover;">
-                                    <div class="row" style="max-height:90vh;">
-                                        <div class="col-md-3 tabbable">
-                                            <ul class="nav nav-tabs flex-column h-100 my-5" style="max-height:85vh;overflow-y:auto;flex-wrap:nowrap;direction:rtl;">
-                                                <!-- Tab1 -->
-                                                <li class="nav-item flag" style="border:0;background:url(img/events/rectflag.png) no-repeat;background-size:100% 100%;">
-                                                    <a class="nav-link h-100 w-100" style="display:flex;" href="#cseMain" data-toggle="tab">
-                                                        <div class="midAlign">
-                                                            Al-khwarizmi Programming Contest
-                                                        </div>
-                                                    </a>
-                                                </li>
-                                                <li class="nav-item flag" style="border:0;background:url(img/events/rectflag.png) no-repeat;background-size:100% 100%;">
-                                                    <a class="nav-link h-100 w-100" style="display:flex;" href="#hacktrec" data-toggle="tab">
-                                                        <div class="midAlign">
-                                                            HackTREC
-                                                        </div>
-                                                    </a>
-                                                </li>
-                                                <!-- END:Tab1 -->
-                                                <li class="nav-item flag" style="border:0;background:url(img/events/rectflag.png) no-repeat;background-size:100% 100%;">
-                                                    <a class="nav-link h-100 w-100" style="display:flex;" href="#panel-701533" data-toggle="tab">
-                                                        <div class="midAlign">
-                                                            Shut the Bug Up!
-                                                        </div>
-                                                    </a>
-                                                </li>
-                                                <li class="nav-item flag" style="border:0;background:url(img/events/rectflag.png) no-repeat;background-size:100% 100%;">
-                                                    <a class="nav-link h-100 w-100" style="display:flex;" href="#panel-780948" data-toggle="tab">
-                                                        <div class="midAlign">
-                                                            NO LIESURE FOR LINGUISTS
-                                                        </div>
-                                                    </a>
-                                                </li>
-                                                <li class="nav-item flag" style="border:0;background:url(img/events/rectflag.png) no-repeat;background-size:100% 100%;">
-                                                    <a class="nav-link h-100 w-100" style="display:flex;" href="#panel-780948" data-toggle="tab">
-                                                        <div class="midAlign">
-                                                            Hitchhike to the SolutionTop
-                                                        </div>
-                                                    </a>
-                                                </li>
-                                                <li class="nav-item flag" style="border:0;background:url(img/events/rectflag.png) no-repeat;background-size:100% 100%;">
-                                                    <a class="nav-link h-100 w-100" style="display:flex;" href="#panel-780948" data-toggle="tab">
-                                                        <div class="midAlign">
-                                                            Global Optimal
-                                                        </div>
-                                                    </a>
-                                                </li>
-                                                <li class="nav-item flag" style="border:0;background:url(img/events/rectflag.png) no-repeat;background-size:100% 100%;">
-                                                    <a class="nav-link h-100 w-100" style="display:flex;" href="#panel-780948" data-toggle="tab">
-                                                        <div class="midAlign">
-                                                            Duel of the Geek Freaks
-                                                        </div>
-                                                    </a>
-                                                </li>
-                                                <li class="nav-item flag" style="border:0;background:url(img/events/rectflag.png) no-repeat;background-size:100% 100%;">
-                                                    <a class="nav-link h-100 w-100" style="display:flex;" href="#panel-780948" data-toggle="tab">
-                                                        <div class="midAlign">
-                                                            Duel of the Geek Freaks
-                                                        </div>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="col-md-9 my-5 py-3">
-                                            <div class="tabbable" id="tabs-873309">
-                                                <div class="tab-content">
-                                                    <!-- TabContent -->
-                                                    <div class="tab-pane" id="cseMain">
-                                                        <div
-                                                        style="
-                                                        width:100%;
-                                                        text-align:center;
-                                                        "
-                                                        >
-                                                            <h1>Al-khwarizmi Programming Contest</h1>
-                                                            <h3>it ain't going to be easy! </h3>
-                                                        <br><br><br><br><br><br><br><br><br><br>
-                                                        <h3>
-                                                        Solve maximum number of problems in minimum time and minimum wrong submissions.<br> 
-                                                        Number of Problems:15
-                                                        <br>Problems Given : Problem
-                                                        <br>Statement and sample cases.
-                                                    </h3>
-                                                    </div>
-                                                    </div>
-                                                    <!-- END:tab-content -->
-                                                    <div class="tab-pane active" id="panel-701553">
-                                                        <p>
-                                                            Howdy, I'm in Section 2.
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- END:deptCSE -->
-    <div class="modal fade" id="comingSoon" tabindex="-1" role="dialog" aria-labelledby="comingSoon" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content" style="background:url(img/events/99.jpg);background-size:cover;">
-                <!-- <div class="modal-header"> -->
-                <!-- <h5 class="modal-title" id="exampleModalLabel">Modal title</h5> -->
-                <!-- </div> -->
-                <div class="modal-body">
-                    <div class="container-fluid">
-                        <div class="row">
-                            <div class="col-sm-2">
-                                <!--style="background:url(img/events/jack.png) no-repeat;background-size:100%;"-->
-                                <button type="button" style="font-size:5em;float:left;padding-left:1em;padding-top:0.5em;" class="close" data-dismiss="modal"
-                                    aria-label="Close">
-                                            <span aria-hidden="true">&times;</span>
-                                            <!-- TODO:ADD SKULL + CROSSBONES instead of X -->
-                                            </button>
-                                <img src="img/events/jack.png" class="align-bottom" style="width:100%;position:absolute;bottom:0;left:0" alt="JackSparrow">
-                            </div>
-                            <div class="col-sm-10">
-                                <div class="container-fluid noticeBody" style="background:url(img/events/final_parchment.png) no-repeat;background-size:cover;">
-                                    <div class="row" style="min-height:90vh;">
-                                        <div class="col-md-12 my-5 py-3">
-                                            <div class="tabbable" id="tabs-873309">
-                                                <div class="tab-content">
-                                                    <!-- TabContent -->
-                                                    <div class="tab-pane active" style="padding: 25% 30% 10% 40%" id="panel-780948">
-                                                        <h1>COMING SOON <br> Stay tuned ye' pile o' slimey barnacles</h1>
-                                                    </div>
-                                                    <!-- END:tab-content -->
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+<body class="demo-2" >
+<!-- Navbar -->
 
-    <div class="container-fluid" style="background-image:url('img/events/bg.jpg')">
-        <!-- Navbar -->
-        <nav style="background-color:rgba(0, 0, 0, 0.5);" class="navbar navbar-expand-lg">
-            <a class="navbar-brand" href="/">Genero17</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+<!-- Navbar -->
 
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="/">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Events<span class="sr-only">(current)</span></a>
-                    </li>
-                    <!-- <li class="nav-item">
-                        <a class="nav-link disabled" href="#">Disabled</a>
-                    </li> -->
-                </ul>
-                <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                </form>
-            </div>
-        </nav>
-        <!-- Navbar -->
-        <!-- Carousel -->
-        <div class="slick">
-            <div class="card" data-toggle="modal" data-target="#deptCSE">
-                <img src="img/events/banners/boat7.png" alt="" class="card-img-top">
-            </div>
-            <div class="card" data-toggle="modal" data-target="#comingSoon">
-                <img src="img/events/banners/boat1.png" alt="" class="card-img-top">
-            </div>
-            <div class="card" data-toggle="modal" data-target="#comingSoon">
-                <img src="img/events/banners/boat2.png" alt="" class="card-img-top">
-            </div>
-            <div class="card" data-toggle="modal" data-target="#comingSoon">
-                <img src="img/events/banners/boat3.png" alt="" class="card-img-top">
-            </div>
-            <div class="card" data-toggle="modal" data-target="#comingSoon">
-                <img src="img/events/banners/boat4.png" alt="" class="card-img-top">
-            </div>
-            <div class="card" data-toggle="modal" data-target="#comingSoon">
-                <img src="img/events/banners/boat6.png" alt="" class="card-img-top">
-            </div>
-            <div class="card" data-toggle="modal" data-target="#comingSoon">
-                <img src="img/events/banners/boat9.png" alt="" class="card-img-top">
-            </div>
-            <div class="card" data-toggle="modal" data-target="#comingSoon">
-                <img src="img/events/banners/boat10.png" alt="" class="card-img-top">
-            </div>
-        </div>
-        <!-- Carousel -->
-    </div>
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
-        crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1"
-        crossorigin="anonymous"></script>
-    <!-- slickJs -->
-    <script type="text/javascript" src="http://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
-    <script src="js/events.js"></script>
+
+	<div class="container">
+		<div class="content">
+			<!-- trianglify pattern container -->
+			<div class="pattern pattern--hidden"></div>
+			<!-- cards -->
+			
+			<div class="wrapper ">
+			
+				<div class="card">
+					<div class="card__container card__container--closed">
+						<svg class="card__image" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1920 500" preserveAspectRatio="xMidYMid slice">
+							<defs>
+								<clipPath id="clipPath1">
+									<polygon class="clip" points="0,500 0,0 1920,0 1920,500"></polygon>
+								</clipPath>
+							</defs>
+							<image clip-path="url(#clipPath1)" width="1920" height="500" xlink:href="img/a.jpg"></image>
+						</svg>
+						<div class="card__content">
+							<i class="card__btn-close fa fa-times"></i>
+							<div class="card__caption">
+								<h2 class="card__title">Card Title</h2>
+								<p class="card__subtitle">card subtitle</p>
+							</div>
+							<div class="card__copy">
+								<p>
+									Data
+								</p>
+								<p>
+									Data
+								</p>
+								<p>
+									Data
+								</p>
+								<p>
+									Data
+								</p>
+								<p>
+									Data
+								</p>
+								<p>
+									Data
+								</p>
+								<p>
+									Data
+								</p>
+								<p>
+									Data
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="card">
+					<div class="card__container card__container--closed">
+						<svg class="card__image" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1920 500" preserveAspectRatio="xMidYMid slice">
+							<defs>
+								<clipPath id="clipPath2">
+									<polygon class="clip" points="0,500 0,0 1920,0 1920,500"></polygon>
+								</clipPath>
+							</defs>
+							<image clip-path="url(#clipPath2)" width="1920" height="500" xlink:href="img/b.jpg"></image>
+						</svg>
+						<div class="card__content">
+							<i class="card__btn-close fa fa-times"></i>
+							<div class="card__caption">
+								<h2 class="card__title">Card Title</h2>
+								<p class="card__subtitle">Card Subtitle</p>
+							</div>
+							<div class="card__copy">
+							   <p>
+									Data
+								</p>
+								<p>
+									Data
+								</p>
+								<p>
+									Data
+								</p>
+								<p>
+									Data
+								</p>
+								<p>
+									Data
+								</p>
+								<p>
+									Data
+								</p>
+								<p>
+									Data
+								</p>
+								<p>
+									Data
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="card">
+					<div class="card__container card__container--closed">
+						<svg class="card__image" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1920 500" preserveAspectRatio="xMidYMid slice">
+							<defs>
+								<clipPath id="clipPath3">
+									<polygon class="clip" points="0,500 0,0 1920,0 1920,500"></polygon>
+								</clipPath>
+							</defs>
+							<image clip-path="url(#clipPath3)" width="1920" height="500" xlink:href="img/c.jpg"></image>
+						</svg>
+						<div class="card__content">
+							<i class="card__btn-close fa fa-times"></i>
+							<div class="card__caption">
+								<h2 class="card__title">Card Title</h2>
+								<p class="card__subtitle">Card Subtitle</p>
+							</div>
+							<div class="card__copy">
+								<p>
+									Data
+								</p>
+								<p>
+									Data
+								</p>
+								<p>
+									Data
+								</p>
+								<p>
+									Data
+								</p>
+								<p>
+									Data
+								</p>
+								<p>
+									Data
+								</p>
+								<p>
+									Data
+								</p>
+								<p>
+									Data
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="card">
+					<div class="card__container card__container--closed">
+						<svg class="card__image" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1920 500" preserveAspectRatio="xMidYMid slice">
+							<defs>
+								<clipPath id="clipPath4">
+									<polygon class="clip" points="0,500 0,0 1920,0 1920,500"></polygon>
+								</clipPath>
+							</defs>
+							<image clip-path="url(#clipPath4)" width="1920" height="500" xlink:href="img/d.jpg"></image>
+						</svg>
+						<div class="card__content">
+							<i class="card__btn-close fa fa-times"></i>
+							<div class="card__caption">
+								<h2 class="card__title">Card Title</h2>
+								<p class="card__subtitle">Card Subtitle</p>
+							</div>
+							<div class="card__copy">
+								<p>
+									Data
+								</p>
+                                <p>
+									Data
+								</p>
+                                <p>
+									Data
+								</p>
+                                <p>
+									Data
+								</p>
+                                <p>
+									Data
+								</p>
+                                <p>
+									Data
+								</p>
+                                <p>
+									Data
+								</p>              			
+       				        </div>
+						</div>
+					</div>
+				</div>
+				<div class="card">
+					<div class="card__container card__container--closed">
+						<svg class="card__image" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1920 500" preserveAspectRatio="xMidYMid slice">
+							<defs>
+								<clipPath id="clipPath5">
+									<polygon class="clip" points="0,500 0,0 1920,0 1920,500"></polygon>
+								</clipPath>
+							</defs>
+							<image clip-path="url(#clipPath5)" width="1920" height="500" xlink:href="img/e.jpg"></image>
+						</svg>
+						<div class="card__content">
+							<i class="card__btn-close fa fa-times"></i>
+							<div class="card__caption">
+								<h2 class="card__title">Card Title</h2>
+								<p class="card__subtitle">Card Subtitle</p>
+							</div>
+							<div class="card__copy">
+								<p>
+									Data
+								</p>
+								<p>
+									Data
+								</p>
+								<p>
+									Data
+								</p>
+								<p>
+									Data
+								</p>
+								<p>
+									Data
+								</p>
+								<p>
+									Data
+								</p>
+								<p>
+									Data
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="card">
+					<div class="card__container card__container--closed">
+						<svg class="card__image" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1920 500" preserveAspectRatio="xMidYMid slice">
+							<defs>
+								<clipPath id="clipPath6">
+									<polygon class="clip" points="0,500 0,0 1920,0 1920,500"></polygon>
+								</clipPath>
+							</defs>
+							<image clip-path="url(#clipPath6)" width="1920" height="500" xlink:href="img/f.jpg"></image>
+						</svg>
+						<div class="card__content">
+							<i class="card__btn-close fa fa-times"></i>
+							<div class="card__caption">
+								<h2 class="card__title">Card Title</h2>
+								<p class="card__subtitle">Card Subtitle</p>
+							</div>
+							<div class="card__copy">
+								<p>
+									Data
+								</p>
+								<p>
+									Data
+								</p>
+								<p>
+									Data
+								</p>
+								<p>
+									Data
+								</p>
+								<p>
+									Data
+								</p>
+								<p>
+									Data
+								</p>
+								<p>
+									Data
+								</p>				
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="card">
+					<div class="card__container card__container--closed">
+						<svg class="card__image" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1920 500" preserveAspectRatio="xMidYMid slice">
+							<defs>
+								<clipPath id="clipPath7">
+									<polygon class="clip" points="0,500 0,0 1920,0 1920,500"></polygon>
+								</clipPath>
+							</defs>
+							<image clip-path="url(#clipPath7)" width="1920" height="500" xlink:href="img/f.jpg"></image>
+						</svg>
+						<div class="card__content">
+							<i class="card__btn-close fa fa-times"></i>
+							<div class="card__caption">
+								<h2 class="card__title">Card Title</h2>
+								<p class="card__subtitle">Card Subtitle</p>
+							</div>
+							<div class="card__copy">
+								<p>
+									Data
+								</p>
+								<p>
+									Data
+								</p>
+								<p>
+									Data
+								</p>
+								<p>
+									Data
+								</p>
+								<p>
+									Data
+								</p>
+								<p>
+									Data
+								</p>
+								<p>
+									Data
+								</p>				
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="card">
+					<div class="card__container card__container--closed">
+						<svg class="card__image" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1920 500" preserveAspectRatio="xMidYMid slice">
+							<defs>
+								<clipPath id="clipPath8">
+									<polygon class="clip" points="0,500 0,0 1920,0 1920,500"></polygon>
+								</clipPath>
+							</defs>
+							<image clip-path="url(#clipPath8)" width="100%" height="500" xlink:href="img/pagani_car.jpg"></image>
+						</svg>
+						<div class="card__content">
+							<i class="card__btn-close fa fa-times"></i>
+							<div class="card__caption">
+								<h2 class="card__title">Card Title</h2>
+								<p class="card__subtitle">Card Subtitle</p>
+							</div>
+							<div class="card__copy">
+								<p>
+									Data
+								</p>
+								<p>
+									Data
+								</p>
+								<p>
+									Data
+								</p>
+								<p>
+									Data
+								</p>
+								<p>
+									Data
+								</p>
+								<p>
+									Data
+								</p>
+								<p>
+									Data
+								</p>				
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- /cards -->
+		</div><!-- /content -->
+	</div>
+	<!-- /container -->
+	<!-- JS -->
+	<script src="js/vendors/trianglify.min.js"></script>
+	<script src="js/vendors/TweenMax.min.js"></script>
+	<script src="js/vendors/ScrollToPlugin.min.js"></script>
+	<script src="js/vendors/cash.min.js"></script>
+	<script src="js/Card-polygon.js"></script>
+	<script src="js/demo-2.js"></script>
 </body>
 
 </html>
