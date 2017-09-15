@@ -117,27 +117,6 @@ h1.main,p.demos {
 	-ms-transform: scale(1);
 	transform: scale(1) translateX(25%);
 }
-.sp-globe-flipped {
-	position: absolute;
-	width: 470px;
-	height:1073px;
-	right: 0;
-	top: 10%;
-	margin: -137px 0 0 -141px;
-	-webkit-transform: scale(1) rotateY(180deg);
-	-moz-transform: scale(1) rotateY(180deg);
-	-o-transform: scale(1) rotateY(180deg);
-	-ms-transform: scale(1) rotateY(180deg);
-	transform: scale(1) rotateY(180deg);
-	background: transparent url(../img/home/sparrow_bw.png) no-repeat top left;
-	-webkit-animation: fadeInBack 3.6s linear 14s backwards;
-	-moz-animation: fadeInBack 3.6s linear 14s backwards;
-	-ms-animation: fadeInBack 3.6s linear 14s backwards;
-	animation: fadeInBack 3.6s linear 14s backwards;
-	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
-	filter: alpha(opacity=30);
-	opacity: 0.3;
-}
 .sp-circle-link {
 	position: absolute;
 	left: 50%;
@@ -213,7 +192,7 @@ h1.main,p.demos {
 	}
 	100%{
 		opacity: 0.2;
-		-webkit-transform: scale(5);
+		-webkit-transform: scale(1);
 	}
 }
 @-webkit-keyframes fadeInRotate{
@@ -267,7 +246,7 @@ h1.main,p.demos {
 	}
 	100%{
 		opacity: 0.2;
-		-moz-transform: scale(5);
+		-moz-transform: scale(1);
 	}
 }
 @-moz-keyframes fadeInRotate{
@@ -326,7 +305,7 @@ h1.main,p.demos {
 	}
 	100%{
 		opacity: 0.2;
-		transform: scale(5);
+		transform: scale(1) translateX(25%);
 	}
 }
 @keyframes fadeInRotate{
