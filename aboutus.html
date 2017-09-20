@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Genero 2k17</title>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="author" content="Codrops" />
+	<link rel="stylesheet" type="text/css" href="css/comingsoon_demo.css" />
+	<link rel="stylesheet" type="text/css" href="css/comingsoon_style2.css" />
+	<!--[if lt IE 10]>
+				<link rel="stylesheet" type="text/css" href="css/style2IE.css" />
+		<![endif]-->
+</head>
+<style type="text/css">
+	@font-face {
+		font-family: pirate;
+		src: url("http://genero17.in/fonts/Amatic-Bold.ttf");
+	}
+
+	.unica-one {
+		font-family: pirate;
+		color: whitesmoke;
+	}
+</style>
+
+<body>
+	<div class="container">
+		<h1 style="font-family: pirate;font-size:2rem;" class="main">Setting sail in<br> <span id="timer" class="unica-one"></span></h1>
+		<div class="sp-container">
+			<div class="sp-content">
+				<div class="sp-globe"></div>
+				<h2 class="frame-1 unica-one" style="font-size:4rem;">Do you believe in Miracles ?</h2>
+				<h2 class="frame-2 unica-one" style="font-size:4rem;">'Cuz Genero 2k17 is here</h2>
+				<h2 class="frame-3 unica-one" style="font-size:4rem;">Better believe it!</h2>
+				<h2 class="frame-4 unica-one"  style="font-size:4rem;">Now!</h2>
+				<h2 class="frame-5 unica-one" style="transform:translateY(-90%);">
+					<span style="font-size:4rem;">Some Sails,</span> <span style="font-size:4rem;">Never end.</span><br> <span style="font-size:4rem;">Better than ever.</span>
+				</h2>
+				<iframe style="position:fixed;bottom:0;right:0;" width="400" height="250" src="https://www.youtube-nocookie.com/embed/afd9XH0oDG4?rel=0"
+				 frameborder="0" allowfullscreen></iframe>
+				<!-- <a class="sp-circle-link" href="http://genero17.in/home">Join us!</a> -->
+			</div>
+		</div>
+	</div>
+</body>
+<script>
+	function countdown() {
+		// Set the date we're counting down to
+		var countDownDate = new Date("Sep 21, 2017 10:00:00").getTime();
+
+		// Update the count down every 1 second
+		var x = setInterval(function () {
+
+			// Get todays date and time
+			var now = new Date().getTime();
+
+			// Find the distance between now an the count down date
+			var distance = countDownDate - now;
+
+			// Time calculations for days, hours, minutes and seconds
+			var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+			var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+			var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+			var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+			// Display the result in the element with id="demo"
+			document.getElementById("timer").innerHTML = days + "d " + hours + "h "
+				+ minutes + "m " + seconds + "s ";
+
+			// If the count down is finished, write some text
+			if (distance < 0) {
+				clearInterval(x);
+				document.getElementById("timer").innerHTML = "EXPIRED";
+			}
+		}, 1000);
+	}
+	countdown();
+
+</script>
+
+</html>
