@@ -351,7 +351,7 @@ a:focus {
 	-webkit-transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
 	transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
 }
-.landing-header__title img{
+.landing-header__title .logo_img{
 	opacity: 0;
 	-webkit-transition: opacity 0.5s, -webkit-transform 0.5s;
 	transition: opacity 0.5s, transform 0.5s;
@@ -359,7 +359,7 @@ a:focus {
 	transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
 }
 
-.landing-layout--open .landing-header__title>img{
+.landing-layout--open .landing-header__title>.logo_img{
 	opacity: 1;	
 }
 

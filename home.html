@@ -51,6 +51,19 @@
 			transform: translateY(10vh);
 			overflow: hidden;
 		}
+
+		@media (min-width:993px) {
+		    .sw-hide-large {
+		        display: none!important
+		    }
+		}
+ 
+		 @media (max-width:600px) {
+		    .sw-hide-small {
+		        display: none!important
+		    }
+		}
+
 	</style>
 </head>
 
@@ -111,12 +124,14 @@
 	<main class="landing-layout">
 		<!-- Landing wrap with sections -->
 		<div class="landing-wrap">
-			<section class="landing landing--above">
-				<video id="video_background" preload="auto" autoplay="true" loop="loop" muted="muted" volume="	0">
+			<section class="landing landing--above sw-hide-small">
+				<video  id="video_background" preload="auto" autoplay="true" loop="loop" muted="muted" volume="	0">
 					<!-- <source src="Dreevoo_com_SlowMo.webm" type="video/webm"> -->
 					<source src="img/landing.m4v" type="video/mp4"> Video not supported
 				</video>
 			</section>
+
+			<section class="landing landing--above sw-hide-large" style="background-image: url(img/jacksparrow2.jpg);"></section>
 			<!--style="background-image: url(img/ghostShip.jpg);"-->
 			<section class="landing landing--beneath" style="background-image: url(img/2.jpg);">
 				<canvas id="bubbles"></canvas>
@@ -126,7 +141,8 @@
 		<!-- Landing header with title -->
 		<header class="landing-header">
 			<h1 class="landing-header__title" data-text="Oceanis">
-				<img src="img/web_logo.png" style="width: 20%">
+				<img src="img/web_logo.png" class="sw-hide-large" style="width: 50%">
+				<img src="img/web_logo.png" class="logo_img sw-hide-small" style="width: 20%">
 				<br>
 				
 			</h1>
