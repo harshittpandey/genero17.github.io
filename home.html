@@ -64,6 +64,12 @@
 		    }
 		}
 
+		@media (max-width:992px) and (min-width:601px) {
+	    .sw-hide-medium {
+	        display: none!important
+	    }
+	}
+
 	</style>
 </head>
 
@@ -124,14 +130,14 @@
 	<main class="landing-layout">
 		<!-- Landing wrap with sections -->
 		<div class="landing-wrap">
-			<section class="landing landing--above sw-hide-small">
+			<section class="landing landing--above sw-hide-small sw-hide-medium">
 				<video  id="video_background" preload="auto" autoplay="true" loop="loop" muted="muted" volume="	0">
 					<!-- <source src="Dreevoo_com_SlowMo.webm" type="video/webm"> -->
 					<source src="img/landing.m4v" type="video/mp4"> Video not supported
 				</video>
 			</section>
 
-			<section class="landing landing--above sw-hide-large" style="background-image: url(img/jacksparrow2.jpg);"></section>
+			<section class="landing landing--above sw-hide-large " style="background-image: url(img/jacksparrow2.jpg);"></section>
 			<!--style="background-image: url(img/ghostShip.jpg);"-->
 			<section class="landing landing--beneath" style="background-image: url(img/2.jpg);">
 				<canvas id="bubbles"></canvas>
@@ -142,12 +148,15 @@
 		<header class="landing-header">
 			<h1 class="landing-header__title" data-text="Oceanis">
 				<img src="img/web_logo.png" class="sw-hide-large" style="width: 50%">
-				<img src="img/web_logo.png" class="logo_img sw-hide-small" style="width: 20%">
+				<img src="img/web_logo.png" class="logo_img sw-hide-small sw-hide-medium" style="width: 20%">
 				<br>
 				
+
 			</h1>
-			<h1></h1><span id="hide" class="landing-header__tagline unica-one" style="color:#C62828;"><span style="font-size:2em;">G</span>enero
-			2K17 </span></h1>
+			 <h1><span id="hide" class="landing-header__tagline unica-one" ><img src="img/home_genero.png" class="sw-hide-large" style="width: 75%;margin-left: 10%">
+			  </h1>
+			  <h1><span id="hide" class="landing-header__tagline unica-one" ><img src="img/home_genero.png" class="sw-hide-medium sw-hide-small" style="width: 100%;margin-left: 10%;padding-bottom: 14vw;padding-right: 5vw">
+			  </h1>
 		</header>
 		<!-- /landing-header -->
 		<!-- Trigger button for layout change -->
