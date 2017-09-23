@@ -32,16 +32,17 @@ var staticFolders = [
     'pics'
 ]
 
-//basically iterating over the array so that i don't need to type all things out , perks of being laze :D
+//basically iterating over the array so that i don't need to type all things out , perks of being lazy :D
 staticFolders.map(function (folder) {
-    app.use(`/${folder}`, express.static(folder))
+    app.use(`/${folder}`, express.static(folder)) // note the use of `` backticks these are used as template strings in js (ES2016)
 })
 
 var pages = [
     'aboutus',
     'events',
     'sponsors',
-    'starNight'
+    'starNight',
+    'bcgk'
 ]
 
 app.get('/', function (req, res) {//Serve the index page at the / route
