@@ -12,11 +12,52 @@ app.use(express.static('mockups')) ;
 app.use(express.static('images')) ;
 app.use(express.static('pics')) ;
 
-app.get('/events(.html)*',function(req,res){
-    res.sendFile(__dirname + '/events.html')
-})
 
 
 var server = app.listen(PORT,function() {
 
 }) ;
+
+//My code
+//Completed task in this , can take reference
+/*
+var staticFolders = [
+    'img',
+    'css',
+    'js',
+    'fonts',
+    'sounds',
+    'vendor',
+    'images',
+    'pics'
+]
+
+//basically iterating over the array so that i don't need to type all things out , perks of being laze :D
+staticFolders.map(function (folder) {
+    app.use(`/${folder}`, express.static(folder))
+})
+
+var pages = [
+    'aboutus',
+    'events',
+    'sponsors',
+    'starNight'
+]
+
+app.get('/', function (req, res) {//Serve the index page at the / route
+    res.sendFile(path.join(__dirname, 'index.html'))
+})
+
+//redirect all the paths such as /events , /sponsors to /events.html and /sponsors.html
+app.get('/:page/*', function (req, res) {
+    res.redirect(`/${req.params.page}.html`)
+})
+
+//Serve page only if in the pages array , otherwise just redirect to the home page
+app.get('/:page.html', function (req, res) {
+    if (pages.findIndex(element => req.params.page == element) == -1)
+        res.redirect('/')
+    else
+        res.sendFile(__dirname + `/${req.params.page}.html`)
+})
+*/
