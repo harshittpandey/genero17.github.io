@@ -1,26 +1,17 @@
-var express = require('express') ;
-var app = express() ;
+// User define Constants
 const PORT = 4000
-app.use('/img',express.static('img')) ; // This is the corrected form to serve the img folder , pls correct in the lines below as well
-app.use(express.static('audio')) ;
-app.use(express.static('css')) ;
-app.use(express.static('js')) ;
-app.use(express.static('fonts')) ;
-app.use(express.static('sounds')) ;
-app.use(express.static('vendor')) ;
-app.use(express.static('mockups')) ;
-app.use(express.static('images')) ;
-app.use(express.static('pics')) ;
+
+// Module requires
+const path = require('path')
+const express = require('express')
+const bodyParser = require('body-parser')
+const uuidv4 = require('uuid/v4')
+
+const app = express();
+app.use(bodyParser.urlencoded({extended:false})) // To parse form data
 
 
-
-var server = app.listen(PORT,function() {
-
-}) ;
-
-//My code
-//Completed task in this , can take reference
-/*
+//FRONTEND LOGIC:START
 var staticFolders = [
     'img',
     'css',
@@ -32,7 +23,6 @@ var staticFolders = [
     'pics'
 ]
 
-//basically iterating over the array so that i don't need to type all things out , perks of being lazy :D
 staticFolders.map(function (folder) {
     app.use(`/${folder}`, express.static(folder)) // note the use of `` backticks these are used as template strings in js (ES2016)
 })
@@ -42,7 +32,8 @@ var pages = [
     'events',
     'sponsors',
     'starNight',
-    'bcgk'
+    'bcgk',
+    'register'
 ]
 
 app.get('/', function (req, res) {//Serve the index page at the / route
@@ -61,4 +52,34 @@ app.get('/:page.html', function (req, res) {
     else
         res.sendFile(__dirname + `/${req.params.page}.html`)
 })
-*/
+
+//FRONTEND LOGIC:END
+
+//REGISTER LOGIC:START
+//All changes according to tutorials should be placed here
+
+
+//REGISTER LOGIC:END
+
+app.listen(PORT, function (data) {
+    console.log(data)
+});
+
+
+
+
+
+//IGNORE
+// app.post('/registerABES',(req,res)=>{//ES6 Function syntax
+//     let a =req.body
+//     a['id']=req.body.admissionNo
+//     jsonStore.add(a,()=>123)
+//     res.send(a)
+// })
+
+// app.post('/registerNONABES',(req,res)=>{//ES6 Function syntax
+//     let a =req.body
+//     a['id']=uuidv4()
+//     jsonStoreNONABES.add(a,()=>123)
+//     res.send(a) 
+// })

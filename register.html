@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Register Form</title>
+</head>
+
+<body>
+    <form action="/registerABES" method="post">
+        <label for="ABES-name">name</label>
+        <input type="text" name="name" id="ABES-name"><br>
+        <label for="admissionNo">Admission No.</label>
+        <input type="text" name="admissionNo" id="admissionNo"><br>
+        <label for="mobile">Mobile no.</label>
+        <input type="text" name="mobile" id="mobile"><br>
+        <label for="email">EMail Id</label>
+        <input type="text" name="email" id="email"><br>
+        <input type="checkbox" name="fullTicket" id="fullTicket">
+        <input type="submit" value="Submit">
+    </form>
+    <form action="/registerNONABES" method="post">
+        <label for="ABES-name">name</label>
+        <input type="text" name="name" id="ABES-name">
+        <label for="admissionNo">Admission No.</label>
+        <input type="text" name="admissionNo" id="admissionNo">
+        <label for="mobile">Mobile no.</label>
+        <input type="text" name="mobile" id="mobile">
+        <label for="email">EMail Id</label>
+        <input type="text" name="email" id="email">
+        <input type="submit" value="Submit(NON ABES)">
+    </form>
+</body>
+
+</html>
