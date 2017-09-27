@@ -53,27 +53,34 @@
 		}
 
 		@media (min-width:993px) {
-		    .sw-hide-large {
-		        display: none!important
-		    }
+			.sw-hide-large {
+				display: none!important
+			}
 		}
- 
-		 @media (max-width:600px) {
-		    .sw-hide-small {
-		        display: none!important
-		    }
+
+		@media (max-width:600px) {
+			.sw-hide-small {
+				display: none!important
+			}
 		}
 
 		@media (max-width:992px) and (min-width:601px) {
-	    .sw-hide-medium {
-	        display: none!important
-	    }
-	}
-
+			.sw-hide-medium {
+				display: none!important
+			}
+		}
 	</style>
 </head>
 
 <body>
+	<div id="id01" class="w3-modal" style="display:block;">
+		<div class="w3-modal-content" style="width:900px;height:636px;background-image:url('img/news.jpg');background-size:contain;">
+			<div class="w3-container" style="padding:0">
+				<span style="font-size:1.5em;" onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+				<!-- <img src="img/news.png" alt="GeneroNEWS" style="max-height:80vh;"> -->
+			</div>
+		</div>
+	</div>
 	<svg class="hidden">
 		<defs>
 			<symbol id="icon-arrow" viewBox="0 0 24 24">
@@ -131,7 +138,7 @@
 		<!-- Landing wrap with sections -->
 		<div class="landing-wrap">
 			<section class="landing landing--above sw-hide-small sw-hide-medium">
-				<video  id="video_background" preload="auto" autoplay="true" loop="loop" muted="muted" volume="	0">
+				<video id="video_background" preload="auto" autoplay="true" loop="loop" muted="muted" volume="	0">
 					<!-- <source src="Dreevoo_com_SlowMo.webm" type="video/webm"> -->
 					<source src="img/landing.m4v" type="video/mp4"> Video not supported
 				</video>
@@ -150,10 +157,10 @@
 				<img src="img/web_logo.png" class="sw-hide-large" style="width: 50%">
 				<img src="img/web_logo.png" class="logo_img sw-hide-small sw-hide-medium" style="width: 20%">
 				<br>
-				
+
 
 			</h1>
-			 <h1><span id="hide" class="landing-header__tagline unica-one" ><img src="img/home_genero.png" class="sw-hide-large" style="width: 75%;margin-left: 10%">
+			<h1><span id="hide" class="landing-header__tagline unica-one"><img src="img/home_genero.png" class="sw-hide-large" style="width: 75%;margin-left: 10%">
 			  </h1>
 			  <h1><span id="hide" class="landing-header__tagline unica-one" ><img src="img/home_genero.png" class="sw-hide-medium sw-hide-small" style="width: 100%;margin-left: 10%;padding-bottom: 14vw;padding-right: 5vw">
 			  </h1>

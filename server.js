@@ -36,9 +36,11 @@ var pages = [
     'register'
 ]
 
-app.get('/', function (req, res) {//Serve the index page at the / route
+function graph(req, res) {//Serve the index page at the / route
     res.sendFile(path.join(__dirname, 'index.html'))
-})
+}
+
+app.get('/', graph)
 
 //redirect all the paths such as /events , /sponsors to /events.html and /sponsors.html
 app.get('/:page/*', function (req, res) {
