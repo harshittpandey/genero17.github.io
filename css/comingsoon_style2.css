@@ -28,21 +28,23 @@ h1.main,p.demos {
 	top: 0px;
 	z-index: 1000;
 }
-.sp-container h2 {
+ .sp-container h2 {
 	position: absolute;
-	top: 50%;
-	line-height: 100px;
+	top: 10%;
+	/* line-height: 100px; */
 	height: 100px;
 	margin-top: -50px;
-	font-size: 100px;
-	width: 100%;
+	margin-left: 10%;
+	font-size: 2em;
+	width: 80%;
 	text-align: center;
-	color: transparent;
-	-webkit-animation: blurFadeInOut 3s ease-in backwards;
-	-moz-animation: blurFadeInOut 3s ease-in backwards;
-	-ms-animation: blurFadeInOut 3s ease-in backwards;
-	animation: blurFadeInOut 3s ease-in backwards;
+	/* color: transparent; */
+	-webkit-animation: blurFadeIn 3s ease-in backwards;
+	-moz-animation: blurFadeIn 3s ease-in backwards;
+	-ms-animation: blurFadeIn 3s ease-in backwards;
+	animation: blurFadeIn 3s ease-in backwards;
 }
+/*
 .sp-container h2.frame-1 {
 	-webkit-animation-delay: 0s;
 	-moz-animation-delay: 0s;
@@ -95,7 +97,7 @@ h1.main,p.demos {
 	-moz-animation-delay: 14s;
 	-ms-animation-delay: 14s;
 	animation-delay: 14s;
-}
+} */
 .sp-globe {
 	position: absolute;
 	width: 470px;
@@ -104,10 +106,10 @@ h1.main,p.demos {
 	top: 10%;
 	margin: -137px 0 0 -141px;
 	background: transparent url(../img/home/sparrow_bw.png) no-repeat top left;
-	-webkit-animation: fadeInBack 3.6s linear 14s backwards;
-	-moz-animation: fadeInBack 3.6s linear 14s backwards;
-	-ms-animation: fadeInBack 3.6s linear 14s backwards;
-	animation: fadeInBack 3.6s linear 14s backwards;
+	-webkit-animation: fadeInBack 3.6s linear 0s backwards;
+	-moz-animation: fadeInBack 3.6s linear 0s backwards;
+	-ms-animation: fadeInBack 3.6s linear 0s backwards;
+	animation: fadeInBack 3.6s linear 0s backwards;
 	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
 	filter: alpha(opacity=30);
 	opacity: 0.3;
