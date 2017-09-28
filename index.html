@@ -82,6 +82,14 @@
 			<!--</div>
 		</div>
 	</div> -->
+	<div id="regModal" class="w3-modal">
+		<div class="w3-modal-content">
+			<div class="w3-container" style="padding:0">
+				<span style="font-size:1.5em;" onclick="document.getElementById('regModal').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+				<!-- <img src="img/news.png" alt="GeneroNEWS" style="max-height:80vh;"> -->
+			</div>
+		</div>
+	</div>
 	<svg class="hidden">
 		<defs>
 			<symbol id="icon-arrow" viewBox="0 0 24 24">
@@ -188,7 +196,7 @@
 						</a>
 				</li>
 				<li class="featured-list__item">
-					<a href="#" class="featured-list__link">
+					<a href="#" class="featured-list__link" onclick="document.getElementById('regModal').style.display='block'">
 							<img class="featured-list__img" src="img/icons/m2.svg" alt="Marine 2">
 							<h3 class="featured-list__title">Register</h3>
 						</a>
