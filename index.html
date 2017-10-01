@@ -26,7 +26,7 @@
 	<style type="text/css">
 		@font-face {
 			font-family: pirate;
-			src: url("http://genero17.in/css/Caribbean.ttf");
+			src: url("http://genero17.in/fonts/Amatic-Bold.ttf");
 		}
 
 		.unica-one {
@@ -73,11 +73,25 @@
 </head>
 
 <body>
-	<div id="id01" class="w3-modal" style="display:block;">
+	<!-- <div id="id01" class="w3-modal" style="display:block;">
 		<div class="w3-modal-content" style="width:900px;height:636px;background-image:url('img/news.jpg');background-size:contain;">
 			<div class="w3-container" style="padding:0">
 				<span style="font-size:1.5em;" onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
-				<!-- <img src="img/news.png" alt="GeneroNEWS" style="max-height:80vh;"> -->
+			-->
+	<!-- <img src="img/news.png" alt="GeneroNEWS" style="max-height:80vh;"> -->
+	<!--</div>
+		</div>
+	</div> -->
+	<div id="regModal" class="w3-modal">
+		<div class="w3-modal-content" style="background-image:url('img/regBg.jpg');background-size:cover;padding:2%;">
+			<div class="w3-container" style="padding:0;align-content:center;">
+				<span style="font-size:1.5em;" onclick="document.getElementById('regModal').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+				<h1 style="text-align:center;font-family: pirate;font-size:5rem;" class="main">Registration starts in <span id="timer"></span></h1>
+				<!-- <div style="background-image:url('img/paytm.png');min-width:10vw;">hello</div> -->
+				<h2 style="text-align:center;font-family: pirate;font-size:5rem;">
+					Powered By:
+				</h2>
+				<img src="img/paytm.png" alt="GeneroNEWS" style="text-align:center;max-height:20vh;margin-left:30%">
 			</div>
 		</div>
 	</div>
@@ -187,7 +201,7 @@
 						</a>
 				</li>
 				<li class="featured-list__item">
-					<a href="#" class="featured-list__link">
+					<a href="#" class="featured-list__link" onclick="document.getElementById('regModal').style.display='block'">
 							<img class="featured-list__img" src="img/icons/m2.svg" alt="Marine 2">
 							<h3 class="featured-list__title">Register</h3>
 						</a>
@@ -228,6 +242,40 @@
 			</svg>
 		</div>
 	</main>
+	<script>
+		function countdown() {
+			// Set the date we're counting down to
+			var countDownDate = new Date("Oct 03, 2017 12:00:00").getTime();
+
+			// Update the count down every 1 second
+			var x = setInterval(function () {
+
+				// Get todays date and time
+				var now = new Date().getTime();
+
+				// Find the distance between now an the count down date
+				var distance = countDownDate - now;
+
+				// Time calculations for days, hours, minutes and seconds
+				var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+				var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+				var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+				var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+				// Display the result in the element with id="demo"
+				document.getElementById("timer").innerHTML = days + "d " + hours + "h "
+					+ minutes + "m " + seconds + "s ";
+
+				// If the count down is finished, write some text
+				if (distance < 0) {
+					clearInterval(x);
+					document.getElementById("timer").innerHTML = "EXPIRED";
+				}
+			}, 1000);
+		}
+		countdown();
+
+	</script>
 	<script src="js/home_howler.min.js"></script>
 	<script src="js/home_imagesloaded.pkgd.min.js"></script>
 	<script src="js/home_main_2.js"></script>

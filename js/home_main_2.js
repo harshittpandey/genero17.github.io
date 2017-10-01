@@ -233,6 +233,12 @@
 		triggerCtrl.addEventListener('click', function() {
 			toggleMenu();
 		});
+		setInterval(function (){
+			if(document.hasFocus()===false)
+				audio.toggleMuteAll(true)
+			else
+				audio.toggleMuteAll(false)
+		},1500)
 		// Mute sounds.
 		soundCtrl.addEventListener('click', function() {
 			if( !isAudioOn ) {
