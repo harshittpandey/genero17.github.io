@@ -1,15 +1,17 @@
 //var sequelize = require('sequelize') ;
+module.exports = function(){
 var Sequelize = require('sequelize');;
 var sequelize = new Sequelize('loginapp', 'purnima', 'Genero20!7', {
     port: 3306,
     dialect: 'mysql'
 });
 var bcrypt = require('bcrypt-nodejs');
-var localUserSchema = sequelize.define('user', {
+var userSchema = sequelize.define('user', {
     "email": Sequelize.STRING,
     "password": Sequelize.STRING
 });
-
+return userSchema ;
+}
 // "local"            : {
     //},
     // "facebook"         : {
@@ -34,11 +36,11 @@ var localUserSchema = sequelize.define('user', {
     //     "name"         : Sequelize.STRING
     // }
 
-userSchema.methods.generateHash = function (password) {
-    return bcrypt.hashSync(password, bcrypt.genSaltSync(8), null);
-};
+//userSchema.methods.generateHash = function (password) {
+//    return bcrypt.hashSync(password, bcrypt.genSaltSync(8), null);
+//};
 
 // checking if password is valid
-userSchema.methods.validPassword = function (password) {
-    return bcrypt.compareSync(password, this.local.password);
-};
+//userSchema.methods.validPassword = function (password) {
+//    return bcrypt.compareSync(password, this.local.password);
+//};

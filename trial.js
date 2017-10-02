@@ -11,7 +11,7 @@ var config = require('./config/database.js');
 var mysql = require('mysql') ;
 //var password = config.password ? config.password : null;
 var sequelize = new Sequelize(config.url, {
-  port: 4000 ,
+  port: 3306 ,
 });
 
 require('./config/passport')(passport); // pass passport for configuration

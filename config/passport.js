@@ -47,13 +47,10 @@ module.exports = function(passport) {
 
         // find a user whose email is the same as the forms email
         // we are checking to see if the user trying to login already exists
-        User.findOne({ 'local.email' :  email }, function(err, user) {
-            // if there are any errors, return the error
-            if (err)
-                return done(err);
-
+        User.findOrCreate({
+           where : { 'local.email' :  email }}).spread(function(user,created){
             // check to see if theres already a user with that email
-            if (user) {
+            if (!created) {
                 return done(null, false, req.flash('signupMessage', 'That email is already taken.'));
             } else {
 
@@ -63,7 +60,7 @@ module.exports = function(passport) {
 
                 // set the user's local credentials
                 newUser.local.email    = email;
-                newUser.local.password = newUser.generateHash(password);
+                newUser.local.password = password;
 
                 // save the user
                 newUser.save(function(err) {
@@ -73,11 +70,10 @@ module.exports = function(passport) {
                 });
             }
 
-        });    
+        });  //
 
         });
 
     }));
 
 };
-
