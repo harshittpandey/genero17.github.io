@@ -69,6 +69,29 @@
 				display: none!important
 			}
 		}
+
+		.paytm-btn,.paytm-btn:active,.paytm-btn:focus {
+			background-color: #08B1F7;
+			outline: none;
+			border-style: solid;
+			border-radius: 5px;
+			border-color: transparent;
+			color: #41EAD4;
+			color:white;
+			font-size: 3rem;
+			padding: 0.25rem 2rem;
+			text-align: center;
+			margin: auto;
+			display: block;
+			font-family: pirate;
+			transition: 1s ease-in-out;
+			border-width: 1.5px;
+		}
+		.paytm-btn:hover{
+			background-color: transparent;
+			border-color:#77DAFC;
+
+		}
 	</style>
 </head>
 
@@ -77,8 +100,9 @@
 		<div class="w3-modal-content" style="width:900px;height:636px;background-image:url('img/news.jpg');background-size:contain;">
 			<div class="w3-container" style="padding:0">
 				<span style="font-size:1.5em;" onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
-
 				<!-- <img src="img/news.png" alt="GeneroNEWS" style="max-height:80vh;"> -->
+				<!-- <button class="paytm-btn"><b>Pay with Paytm</b></button> -->
+				
 			</div>
 		</div>
 	</div>
@@ -86,8 +110,10 @@
 		<div class="w3-modal-content" style="background-image:url('img/regBg.jpg');background-size:cover;padding:2%;">
 			<div class="w3-container" style="padding:0;align-content:center;">
 				<span style="font-size:1.5em;" onclick="document.getElementById('regModal').style.display='none'" class="w3-button w3-display-topright">&times;</span>
-				<h1 style="text-align:center;font-family: pirate;font-size:5rem;" class="main">Registration starts in <span id="timer"></span></h1>
+				<!-- <h1 style="text-align:center;font-family: pirate;font-size:5rem;" class="main">Registration starts in <span id="timer"></span></h1> -->
+				<h1 style="text-align:center;font-family: pirate;font-size:5rem;" class="main">Registration started!</h1>				
 				<!-- <div style="background-image:url('img/paytm.png');min-width:10vw;">hello</div> -->
+				<a href="https://paytm.com/education?op=ABES%20Engineering%20College&type=registration" target="blank">	<button class="paytm-btn"><b>Pay with Paytm</b></button></a>
 				<h2 style="text-align:center;font-family: pirate;font-size:5rem;">
 					Powered By:
 				</h2>
