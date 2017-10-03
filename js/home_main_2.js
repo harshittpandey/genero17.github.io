@@ -152,7 +152,8 @@
 			sources : [{
 				lake : 'sounds/Ocean_Waves-Mike_Koenig-980635527.mp3',
 				splash : 'sounds/Water Splash-SoundBible.com-800223477.mp3',
-				underwater : 'sounds/96742__robinhood76__01650-underwater-bubbles.mp3'
+				underwater : 'sounds/96742__robinhood76__01650-underwater-bubbles.mp3',
+				potc: 'sounds/potc.mp3'
 			}],
 			load : function(callback) {
 				this.totalFiles = Object.size(this.sources[0]);
@@ -214,7 +215,9 @@
 					mainContainer.classList.add('landing-layout--loaded');
 					// Play lake sound.
 					audio.loop('lake');
+					audio.loop('potc');
 					audio.play('lake');
+					audio.play('potc');
 					// Init the bubbles canvas animation.
 					bubbles.init();
 					// Init/Bind Events
