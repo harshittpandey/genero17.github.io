@@ -237,6 +237,8 @@
 			toggleMenu();
 		});
 		setInterval(function (){
+			if(!isAudioOn)
+				return;
 			if(document.hasFocus()===false)
 				audio.toggleMuteAll(true)
 			else
