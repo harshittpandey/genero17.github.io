@@ -70,14 +70,16 @@
 			}
 		}
 
-		.paytm-btn,.paytm-btn:active,.paytm-btn:focus {
+		.paytm-btn,
+		.paytm-btn:active,
+		.paytm-btn:focus {
 			background-color: #08B1F7;
 			outline: none;
 			border-style: solid;
 			border-radius: 5px;
 			border-color: transparent;
 			color: #41EAD4;
-			color:white;
+			color: white;
 			font-size: 3rem;
 			padding: 0.25rem 2rem;
 			text-align: center;
@@ -87,10 +89,10 @@
 			transition: 1s ease-in-out;
 			border-width: 1.5px;
 		}
-		.paytm-btn:hover{
-			background-color: transparent;
-			border-color:#77DAFC;
 
+		.paytm-btn:hover {
+			background-color: transparent;
+			border-color: #77DAFC;
 		}
 	</style>
 </head>
@@ -101,9 +103,9 @@
 			<div class="w3-container" style="padding:0">
 				<span style="font-size:1.5em;" onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
 				<!-- <img src="img/news.png" alt="GeneroNEWS" style="max-height:80vh;"> -->
-				<!-- <button class="paytm-btn"><b>Pay with Paytm</b></button> -->
-				
-			<!-- </div>
+	<!-- <button class="paytm-btn"><b>Pay with Paytm</b></button> -->
+
+	<!-- </div>
 		</div>
 	</div> -->
 	<div id="regModal" class="w3-modal">
@@ -111,13 +113,25 @@
 			<div class="w3-container" style="padding:0;align-content:center;">
 				<span style="font-size:1.5em;" onclick="document.getElementById('regModal').style.display='none'" class="w3-button w3-display-topright">&times;</span>
 				<!-- <h1 style="text-align:center;font-family: pirate;font-size:5rem;" class="main">Registration starts in <span id="timer"></span></h1> -->
-				<h1 style="text-align:center;font-family: pirate;font-size:5rem;" class="main">Registration started!</h1>				
+				<h1 style="text-align:center;font-family: pirate;font-size:5rem;" class="main">Registration started!</h1>
 				<!-- <div style="background-image:url('img/paytm.png');min-width:10vw;">hello</div> -->
 				<a href="https://paytm.com/education?op=ABES%20Engineering%20College&type=registration" target="blank">	<button class="paytm-btn"><b>Pay with Paytm</b></button></a>
 				<h2 style="text-align:center;font-family: pirate;font-size:5rem;">
 					Powered By:
 				</h2>
-				<img src="img/paytm.png" alt="GeneroNEWS" style="text-align:center;max-height:20vh;margin-left:30%">
+				<img src="img/paytm.png" alt="GeneroNEWS" style="display:block;text-align:center;max-height:20vh;margin-left:30%">
+			</div>
+		</div>
+	</div>
+	<div id="samodal" class="w3-modal">
+		<div class="w3-modal-content" style="background-image:url('img/regBg.jpg');background-size:cover;padding:2%;">
+			<div class="w3-container" style="padding:0;align-content:center;">
+					<span style="font-size:1.5em;" onclick="document.getElementById('samodal').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+				<a href="#" target="blank">	<button class="paytm-btn"><b>Asmita Theatre</b></button></a>	
+				<br>			
+				<a href="http://genero17.in/saDay2.html" target="blank">	<button class="paytm-btn"><b>SA Day 2</b></button></a>
+				<br>
+				<a href="http://genero17.in/starNight.html" target="blank">	<button class="paytm-btn"><b>Nikhil D'Souza</b></button></a>				
 			</div>
 		</div>
 	</div>
@@ -233,7 +247,7 @@
 						</a>
 				</li>
 				<li class="featured-list__item">
-					<a href="#" class="featured-list__link">
+					<a href="#" class="featured-list__link" onclick="document.getElementById('samodal').style.display='block'">
 							<img class="featured-list__img" src="img/icons/m3.svg" alt="Marine 3">
 							<h3 class="featured-list__title">Special attractions</h3>
 						</a>
