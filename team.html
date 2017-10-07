@@ -6,222 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Team - Genero17</title>
-    <style>
-        body {
-            background: url("img/team/bg.jpg");
-            background-size: contain;
-        }
-
-        #posters {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-evenly;
-            margin: 2vw 1vw;
-        }
-
-        #poster {
-            min-height: 20vh;
-            min-width: 20vw;
-            padding: 1vw;
-            transition: 1s;
-        }
-        /* 
-        #poster:hover {
-            transform: scale(1.2)
-        } */
-
-        figure {
-            overflow: hidden;
-        }
-        /* common */
-
-        .grid figure {
-            position: relative;
-            float: left;
-            overflow: hidden;
-            margin: 10px 1%;
-            text-align: center;
-            cursor: pointer;
-        }
-
-        .grid figure img {
-            position: relative;
-            display: block;
-            min-height: 100%;
-            max-width: 100%;
-            opacity: 0.9;
-        }
-
-        .grid figure figcaption {
-            padding: 2em;
-            color: #fff;
-            text-transform: uppercase;
-            font-size: 1.25em;
-            -webkit-backface-visibility: hidden;
-            backface-visibility: hidden;
-        }
-
-        .grid figure figcaption::before,
-        .grid figure figcaption::after {
-            pointer-events: none;
-        }
-
-        .grid figure figcaption,
-        .grid figure figcaption>a {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-        }
-        /* Anchor will cover the whole item by default */
-        /* For some effects it will show as a button */
-
-        .grid figure figcaption>a {
-            z-index: 1000;
-            text-indent: 200%;
-            white-space: nowrap;
-            font-size: 0;
-            opacity: 0;
-        }
-
-        .grid figure h2 {
-            word-spacing: -0.15em;
-            font-weight: 300;
-        }
-
-        .grid figure h2 span {
-            font-weight: 800;
-        }
-
-        .grid figure h2,
-        .grid figure p {
-            margin: 0;
-        }
-
-        .grid figure p {
-            letter-spacing: 1px;
-            font-size: 68.5%;
-        }
-        /* ad */
-        /*---------------*/
-        /***** Zoe *****/
-        /*---------------*/
-
-        figure.effect-zoe img {
-            transition: 0.35s;
-        }
-
-        figure.effect-zoe img:hover {
-            transform: translate(0, -10%);
-        }
-
-        figure.effect-zoe figcaption {
-            top: auto;
-            bottom: 0;
-            padding: 1em;
-            height: 1em;
-            background: #fff;
-            color: #3c4a50;
-            -webkit-transition: -webkit-transform 0.35s;
-            transition: transform 0.35s;
-            -webkit-transform: translate3d(0, 100%, 0);
-            transform: translate3d(0, 100%, 0);
-        }
-
-        figure.effect-zoe h2 {
-            float: left;
-        }
-
-        figure.effect-zoe p.icon-links a {
-            float: right;
-            color: #3c4a50;
-            font-size: 1.4em;
-        }
-
-        figure.effect-zoe:hover p.icon-links a:hover,
-        figure.effect-zoe:hover p.icon-links a:focus {
-            color: #252d31;
-        }
-
-        figure.effect-zoe p.description {
-            position: absolute;
-            bottom: 8em;
-            padding: 2em;
-            color: #fff;
-            text-transform: none;
-            font-size: 90%;
-            opacity: 0;
-            -webkit-transition: opacity 0.35s;
-            transition: opacity 0.35s;
-            -webkit-backface-visibility: hidden;
-            /* Fix for Chrome 37.0.2062.120 (Mac) */
-        }
-
-        figure.effect-zoe h2,
-        figure.effect-zoe p.icon-links a {
-            -webkit-transition: -webkit-transform 0.35s;
-            transition: transform 0.35s;
-            -webkit-transform: translate3d(0, 200%, 0);
-            transform: translate3d(0, 200%, 0);
-        }
-
-        figure.effect-zoe p.icon-links a span::before {
-            display: inline-block;
-            padding: 8px 10px;
-            font-family: 'feathericons';
-            speak: none;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-        }
-
-
-        figure.effect-zoe h2 {
-            display: inline-block;
-        }
-
-        figure.effect-zoe:hover p.description {
-            opacity: 1;
-        }
-
-        figure.effect-zoe:hover figcaption,
-        figure.effect-zoe:hover h2,
-        figure.effect-zoe:hover p.icon-links a {
-            -webkit-transform: translate3d(0, 0, 0);
-            transform: translate3d(0, 0, 0);
-        }
-
-        figure.effect-zoe:hover h2 {
-            -webkit-transition-delay: 0.05s;
-            transition-delay: 0.05s;
-        }
-
-        figure.effect-zoe:hover p.icon-links a:nth-child(3) {
-            -webkit-transition-delay: 0.1s;
-            transition-delay: 0.1s;
-        }
-
-        figure.effect-zoe:hover p.icon-links a:nth-child(2) {
-            -webkit-transition-delay: 0.15s;
-            transition-delay: 0.15s;
-        }
-
-        figure.effect-zoe:hover p.icon-links a:first-child {
-            -webkit-transition-delay: 0.2s;
-            transition-delay: 0.2s;
-        }
-        /* as */
-    </style>
+    <link rel="stylesheet" href="css/team.css">
 </head>
 
 <body>
+    <div style="display:block;text-align:center;padding:2vw;">
+        <img src="img/team/banner.png" style="max-width:50vw;" alt="">
+    </div>
     <div id="posters">
         <div class="grid" id="poster">
             <figure class="effect-zoe">
                 <img src="img/team/shivanshu_rao.jpg" alt="">
                 <figcaption>
                     <p>
-                        Mob:9910656339
+                        Mob:<br>9910656339
                     </p>
                 </figcaption>
             </figure>
@@ -230,9 +28,9 @@
             <figure class="effect-zoe">
                 <img src="img/team/nihaal_patel.jpg" alt="">
                 <figcaption>
-                    <h2>
-                        Mob:9971153956
-                    </h2>
+                    <p>
+                        Mob:<br>9971153956
+                    </p>
                 </figcaption>
             </figure>
         </div>
@@ -240,9 +38,9 @@
             <figure class="effect-zoe">
                 <img src="img/team/dishant.jpg" alt="">
                 <figcaption>
-                    <h2>
-                        Mob:8860529279
-                    </h2>
+                    <p>
+                        Mob:<br>8860529279
+                    </p>
                 </figcaption>
             </figure>
         </div>
@@ -250,9 +48,9 @@
             <figure class="effect-zoe">
                 <img src="img/team/dishant.jpg" alt="">
                 <figcaption>
-                    <h2>
-                        Mob:9717057864
-                    </h2>
+                    <p>
+                        Mob:<br>9717057864
+                    </p>
                 </figcaption>
             </figure>
         </div> -->
@@ -260,9 +58,9 @@
             <figure class="effect-zoe">
                 <img src="img/team/amartya.jpg" alt="">
                 <figcaption>
-                    <h2>
-                        Mob:8285740996
-                    </h2>
+                    <p>
+                        Mob:<br>8285740996
+                    </p>
                 </figcaption>
             </figure>
         </div>
@@ -270,9 +68,9 @@
             <figure class="effect-zoe">
                 <img src="img/team/pragyan_singh.jpg" alt="">
                 <figcaption>
-                    <h2>
-                        Mob:8826158380
-                    </h2>
+                    <p>
+                        Mob:<br>8826158380
+                    </p>
                 </figcaption>
             </figure>
         </div>
@@ -280,9 +78,9 @@
             <figure class="effect-zoe">
                 <img src="img/team/anurag_santhalia.jpg" alt="">
                 <figcaption>
-                    <h2>
-                        Mob:9654915320
-                    </h2>
+                    <p>
+                        Mob:<br>9654915320
+                    </p>
                 </figcaption>
             </figure>
         </div>
@@ -291,9 +89,9 @@
             <figure class="effect-zoe">
                 <img src="img/team/divyakshitij.jpg" alt="">
                 <figcaption>
-                    <h2>
-                        Mob:8750800223
-                    </h2>
+                    <p>
+                        Mob:<br>8750800223
+                    </p>
                 </figcaption>
             </figure>
         </div>
@@ -301,9 +99,9 @@
             <figure class="effect-zoe">
                 <img src="img/team/neetisha_verma.jpg" alt="">
                 <figcaption>
-                    <h2>
-                        Mob:9717855005
-                    </h2>
+                    <p>
+                        Mob:<br>9717855005
+                    </p>
                 </figcaption>
             </figure>
         </div>
@@ -311,9 +109,9 @@
             <figure class="effect-zoe">
                 <img src="img/team/somesh_gupta.jpg" alt="">
                 <figcaption>
-                    <h2>
-                        Mob:8808734734
-                    </h2>
+                    <p>
+                        Mob:<br>8808734734
+                    </p>
                 </figcaption>
             </figure>
         </div>
@@ -321,9 +119,9 @@
             <figure class="effect-zoe">
                 <img src="img/team/abhisheksingh.jpg" alt="">
                 <figcaption>
-                    <h2>
-                        Mob:9643145368  ,7007652492
-                    </h2>
+                    <p>
+                        Mob:<br>9643145368 ,7007652492
+                    </p>
                 </figcaption>
             </figure>
         </div>
@@ -331,9 +129,9 @@
             <figure class="effect-zoe">
                 <img src="img/team/shashank_srivastava.jpg" alt="">
                 <figcaption>
-                    <h2>
-                        Mob:8004393565
-                    </h2>
+                    <p>
+                        Mob:<br>8004393565
+                    </p>
                 </figcaption>
             </figure>
         </div>
@@ -341,9 +139,9 @@
             <figure class="effect-zoe">
                 <img src="img/team/satvik_garg.jpg" alt="">
                 <figcaption>
-                    <h2>
-                        Mob:7838525157
-                    </h2>
+                    <p>
+                        Mob:<br>7838525157
+                    </p>
                 </figcaption>
             </figure>
         </div>
@@ -351,9 +149,9 @@
             <figure class="effect-zoe">
                 <img src="img/team/divyanshgarg.jpg" alt="">
                 <figcaption>
-                    <h2>
-                        Mob:8447153850
-                    </h2>
+                    <p>
+                        Mob:<br>8447153850
+                    </p>
                 </figcaption>
             </figure>
         </div>
@@ -361,9 +159,9 @@
             <figure class="effect-zoe">
                 <img src="img/team/gauravpatel.jpg" alt="">
                 <figcaption>
-                    <h2>
-                        Mob:8447153850
-                    </h2>
+                    <p>
+                        Mob:<br>8447153850
+                    </p>
                 </figcaption>
             </figure>
         </div>
@@ -371,9 +169,9 @@
             <figure class="effect-zoe">
                 <img src="img/team/sahil_gupta.jpg" alt="">
                 <figcaption>
-                    <h2>
-                        Mob:9555903452
-                    </h2>
+                    <p>
+                        Mob:<br>9555903452
+                    </p>
                 </figcaption>
             </figure>
         </div>
@@ -381,9 +179,9 @@
             <figure class="effect-zoe">
                 <img src="img/team/shivi_aggrawal.jpg" alt="">
                 <figcaption>
-                    <h2>
-                        Mob:
-                    </h2>
+                    <p>
+                        Mob:<br>9971160931
+                    </p>
                 </figcaption>
             </figure>
         </div>
@@ -391,9 +189,9 @@
             <figure class="effect-zoe">
                 <img src="img/team/gauravjoshi.jpg" alt="">
                 <figcaption>
-                    <h2>
-                        Mob:
-                    </h2>
+                    <p>
+                        Mob:<br>9450826480
+                    </p>
                 </figcaption>
             </figure>
         </div>
@@ -401,9 +199,9 @@
             <figure class="effect-zoe">
                 <img src="img/team/shobhit_singh.jpg" alt="">
                 <figcaption>
-                    <h2>
-                        Mob:
-                    </h2>
+                    <p>
+                        Mob:<br>9450826480
+                    </p>
                 </figcaption>
             </figure>
         </div>
@@ -411,9 +209,9 @@
             <figure class="effect-zoe">
                 <img src="img/team/vivek_pandey.jpg" alt="">
                 <figcaption>
-                    <h2>
-                        Mob:
-                    </h2>
+                    <p>
+                        Mob:<br>7838576104
+                    </p>
                 </figcaption>
             </figure>
         </div>
@@ -421,9 +219,9 @@
             <figure class="effect-zoe">
                 <img src="img/team/saurabh_singh.jpg" alt="">
                 <figcaption>
-                    <h2>
-                        Mob:
-                    </h2>
+                    <p>
+                        Mob:<br>7053983169 ,8077001473
+                    </p>
                 </figcaption>
             </figure>
         </div>
@@ -431,9 +229,9 @@
             <figure class="effect-zoe">
                 <img src="img/team/shashwat_mishra.jpg" alt="">
                 <figcaption>
-                    <h2>
-                        Mob:
-                    </h2>
+                    <p>
+                        Mob:<br>9643145443
+                    </p>
                 </figcaption>
             </figure>
         </div>
@@ -441,9 +239,9 @@
             <figure class="effect-zoe">
                 <img src="img/team/srishti_sharma.jpg" alt="">
                 <figcaption>
-                    <h2>
-                        Mob:
-                    </h2>
+                    <p>
+                        Mob:<br>7042116302
+                    </p>
                 </figcaption>
             </figure>
         </div>
@@ -451,9 +249,9 @@
             <figure class="effect-zoe">
                 <img src="img/team/lakshyadeep.jpg" alt="">
                 <figcaption>
-                    <h2>
-                        Mob:
-                    </h2>
+                    <p>
+                        Mob:<br>7838023387
+                    </p>
                 </figcaption>
             </figure>
         </div>
@@ -461,9 +259,9 @@
             <figure class="effect-zoe">
                 <img src="img/team/akanshakarnwal.jpg" alt="">
                 <figcaption>
-                    <h2>
-                        Mob:
-                    </h2>
+                    <p>
+                        Mob:<br>7838023387
+                    </p>
                 </figcaption>
             </figure>
         </div>
@@ -471,9 +269,9 @@
             <figure class="effect-zoe">
                 <img src="img/team/rishabh_verma.jpg" alt="">
                 <figcaption>
-                    <h2>
-                        Mob:
-                    </h2>
+                    <p>
+                        Mob:<br>7053983099
+                    </p>
                 </figcaption>
             </figure>
         </div>
@@ -481,9 +279,9 @@
             <figure class="effect-zoe">
                 <img src="img/team/chaudhary.jpg" alt="">
                 <figcaption>
-                    <h2>
-                        Mob:
-                    </h2>
+                    <p>
+                        Mob:<br>9997034699
+                    </p>
                 </figcaption>
             </figure>
         </div>
@@ -491,9 +289,9 @@
             <figure class="effect-zoe">
                 <img src="img/team/rakshita_gupta.jpg" alt="">
                 <figcaption>
-                    <h2>
-                        Mob:
-                    </h2>
+                    <p>
+                        Mob:<br>7053983099
+                    </p>
                 </figcaption>
             </figure>
         </div>
@@ -501,9 +299,9 @@
             <figure class="effect-zoe">
                 <img src="img/team/divyanshtyagi.jpg" alt="">
                 <figcaption>
-                    <h2>
-                        Mob:
-                    </h2>
+                    <p>
+                        Mob:<br>9997034699
+                    </p>
                 </figcaption>
             </figure>
         </div>
@@ -511,9 +309,9 @@
             <figure class="effect-zoe">
                 <img src="img/team/gautam.jpg" alt="">
                 <figcaption>
-                    <h2>
-                        Mob:
-                    </h2>
+                    <p>
+                        Mob:<br>7065199317
+                    </p>
                 </figcaption>
             </figure>
         </div>
@@ -521,9 +319,9 @@
             <figure class="effect-zoe">
                 <img src="img/team/kshitijsaxena.jpg" alt="">
                 <figcaption>
-                    <h2>
-                        Mob:
-                    </h2>
+                    <p>
+                        Mob:<br>8512875419 ,9069397845
+                    </p>
                 </figcaption>
             </figure>
         </div>
@@ -531,9 +329,9 @@
             <figure class="effect-zoe">
                 <img src="img/team/adarshsingh.jpg" alt="">
                 <figcaption>
-                    <h2>
-                        Mob:
-                    </h2>
+                    <p>
+                        Mob:<br>9540409305
+                    </p>
                 </figcaption>
             </figure>
         </div>
@@ -541,9 +339,9 @@
             <figure class="effect-zoe">
                 <img src="img/team/vaibhav_kumar.jpg" alt="">
                 <figcaption>
-                    <h2>
-                        Mob:
-                    </h2>
+                    <p>
+                        Mob:<br>9958927504
+                    </p>
                 </figcaption>
             </figure>
         </div>
@@ -551,9 +349,9 @@
             <figure class="effect-zoe">
                 <img src="img/team/akashchawla.jpg" alt="">
                 <figcaption>
-                    <h2>
-                        Mob:
-                    </h2>
+                    <p>
+                        Mob:<br>8285298211
+                    </p>
                 </figcaption>
             </figure>
         </div>
@@ -561,9 +359,9 @@
             <figure class="effect-zoe">
                 <img src="img/team/yash_nigam.jpg" alt="">
                 <figcaption>
-                    <h2>
-                        Mob:
-                    </h2>
+                    <p>
+                        Mob:<br>8285298211
+                    </p>
                 </figcaption>
             </figure>
         </div>
@@ -571,9 +369,9 @@
             <figure class="effect-zoe">
                 <img src="img/team/divyanshtyagi.jpg" alt="">
                 <figcaption>
-                    <h2>
-                        Mob:
-                    </h2>
+                    <p>
+                        Mob:<br>9971140458
+                    </p>
                 </figcaption>
             </figure>
         </div>
@@ -581,9 +379,9 @@
             <figure class="effect-zoe">
                 <img src="img/team/pranjal_mishra.jpg" alt="">
                 <figcaption>
-                    <h2>
-                        Mob:
-                    </h2>
+                    <p>
+                        Mob:<br>9971455639
+                    </p>
                 </figcaption>
             </figure>
         </div>
@@ -591,9 +389,9 @@
             <figure class="effect-zoe">
                 <img src="img/team/navneetsingh.jpg" alt="">
                 <figcaption>
-                    <h2>
-                        Mob:
-                    </h2>
+                    <p>
+                        Mob:<br>9654734035
+                    </p>
                 </figcaption>
             </figure>
         </div>
@@ -601,9 +399,9 @@
             <figure class="effect-zoe">
                 <img src="img/team/rajabadal.jpg" alt="">
                 <figcaption>
-                    <h2>
-                        Mob:
-                    </h2>
+                    <p>
+                        Mob:<br>9560953519 ,9560025519
+                    </p>
                 </figcaption>
             </figure>
         </div>
@@ -611,9 +409,9 @@
             <figure class="effect-zoe">
                 <img src="img/team/himanshupatel.jpg" alt="">
                 <figcaption>
-                    <h2>
-                        Mob:
-                    </h2>
+                    <p>
+                        Mob:<br>9911824822
+                    </p>
                 </figcaption>
             </figure>
         </div>
@@ -621,9 +419,9 @@
             <figure class="effect-zoe">
                 <img src="img/team/vaibhav_prasad.jpg" alt="">
                 <figcaption>
-                    <h2>
-                        Mob:
-                    </h2>
+                    <p>
+                        Mob:<br>8826326336
+                    </p>
                 </figcaption>
             </figure>
         </div>
@@ -631,9 +429,9 @@
             <figure class="effect-zoe">
                 <img src="img/team/sugandha_agarwal.jpg" alt="">
                 <figcaption>
-                    <h2>
-                        Mob:
-                    </h2>
+                    <p>
+                        Mob:<br>
+                    </p>
                 </figcaption>
             </figure>
         </div>
@@ -641,9 +439,9 @@
             <figure class="effect-zoe">
                 <img src="img/team/shubhashish_prakash.jpg" alt="">
                 <figcaption>
-                    <h2>
-                        Mob:
-                    </h2>
+                    <p>
+                        Mob:<br>8826326336
+                    </p>
                 </figcaption>
             </figure>
         </div>
@@ -651,9 +449,9 @@
             <figure class="effect-zoe">
                 <img src="img/team/harshitrastogi.jpg" alt="">
                 <figcaption>
-                    <h2>
-                        Mob:
-                    </h2>
+                    <p>
+                        Mob:<br>9643145384
+                    </p>
                 </figcaption>
             </figure>
         </div>
