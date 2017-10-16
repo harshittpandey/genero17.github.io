@@ -12,6 +12,7 @@
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M"
     crossorigin="anonymous">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
   <!-- Custom fonts for this template -->
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -45,6 +46,8 @@
     }
   }
 
+.mySlides {display:none;}
+
   #particles-js {
     width: 100%;
     height: 100%;
@@ -54,6 +57,23 @@
   .img-fluid {
     width: 100%;
   }
+  .animate-right {
+      display: block;
+      position: relative;
+      animation: animateright 0.8s
+  }
+
+  @keyframes animateright {
+      from {
+          right: -300px;
+          opacity: 0
+      }
+      to {
+          right: 0;
+          opacity: 1
+      }
+  }
+
 </style>
 <script>
 
@@ -89,27 +109,31 @@
   <header class="masthead" id="particle-js">
     <div class="header-content">
       <div class="header-content-inner">
+        <!-- <div style="width: 100%">
+          <img class="mySlides w3-animate-right" src="img/SA2/2/tatvakmy2.jpg" style="width:100%">
+          <img class="mySlides w3-animate-right" src="img/SA2/2/comedymy.jpg" style="width:100%">
+          <img class="mySlides w3-animate-right" src="img/SA2/2/tronbgmy.jpg" style="width:100%">
+        </div>
+         -->
         <div id="slide1" style="color:black;display:block;">
-          <h1 id="homeHeading">Special Attraction - Day 2 </h1>
-          <hr>
-          <p>Last time you witnessed the VH1 Supersonic, this time we are back with triple the magic !</p>
+        </div> 
+
+        <div class="w3-animate-right" style=""> 
+          <div id="slide1" style="display:none;">
+          </div>
         </div>
-        <div id="slide2" style="display:none;">
-          <h1 id="homeHeading">Bollywood Dance music night </h1>
-          <hr>
-          <p>Dance to desi beats by DJ Tatva K !</p>
+
+        <div class="w3-animate-right">
+          <div class="w3-animate-right" id="slide2" style="display:none;">
+            
+          </div>
         </div>
-        <div id="slide3" style="display:none;">
-          <h1 id="homeHeading">Comedy Night </h1>
-          <hr>
-          <p>Get ready to get your funny bones tickled by Jaspreet singh!</p>
+
+        <div class="w3-animate-right">
+          <div class="w3-animate-right" id="slide3" style="display:none;">
+            
+          </div>
         </div>
-        <div id="slide4" style="display:none;">
-          <h1 id="homeHeading">TRON Dance Group</h1>
-          <hr>
-          <p>Dive into the world Neon world of TRON and dance till you drop on the floor !</p>
-        </div>
-        <a class="btn btn-primary btn-xl" href="#about">Find Out More</a>
       </div>
     </div>
   </header>
@@ -226,29 +250,45 @@
   <!-- particleJS -->
   <!-- <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script> -->
 
+<!--   <script>
+  var myIndex = 0;
+  carousel();
 
+  function carousel() {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";  
+      }
+      myIndex++;
+      if (myIndex > x.length) {myIndex = 1}    
+      x[myIndex-1].style.display = "block";  
+      setTimeout(carousel, 2500);    
+  }
+  </script> -->
+   
   <script>
     var urls = [
-      'vh1.jpg',
-      'tatvak.jpg',
-      'comedy1.jpg',
-      'tronbg.jpg'
+      'tatvakmy3.jpg',
+      'comedymy.jpg',
+      'tronbgmy.jpg'
     ]
-    var slideLen = 4
+    var slideLen = 3
     var index = 0;
-
-    setTimeout(function () {
-      setInterval(function () {
+    repeat();
+    function repeat() {
         $("#particle-js").css("background-image", "url('img/SA/2/" + urls[index] + "')")
         for (i = 1; i <= slideLen; ++i) {
+
           $("#slide" + i).css("display", "none")
         }
-        $("#slide" + (index + 1)).css("display", "block")
-        index = (index + 1) % urls.length
-      }, 3000)
-    }, 100)
-  </script>
 
+        $("#slide" + (index + 1)).last().addClass("animate-right")
+        index = (index + 1) % urls.length
+      setTimeout(repeat, 3000);
+      }
+  </script>
+ 
 </body>
 
 </html>
