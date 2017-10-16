@@ -165,8 +165,7 @@ a:focus {
 .landing-header__tagline {
 	font-size: 1em;
     font-weight: 500;
-	text-transform: uppercase;
-	letter-spacing: 10px;
+	letter-spacing: 4px;
 	max-width: 500px;
 	margin: 0 auto;
 	color: #2D2D2D;

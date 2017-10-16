@@ -11,11 +11,14 @@
 	<meta name="keywords" content="landing page, background sound, aquatic theme, effect, transition, animation" />
 	<meta name="author" content="Codrops" />
 	<link href="https://fonts.googleapis.com/css?family=Crimson+Text:600|Raleway:900" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed|Arapey|Archivo+Black|Elsie+Swash+Caps|Playfair+Display|Anton|Rubik|Teko:600|Sacramento|Abril+Fatface|Cormorant+Garamond|Neucha|Unica+One|Old+Standard+TT" rel="stylesheet">
+        
 	<link rel="stylesheet" type="text/css" href="css/home_normalize.css" />
 	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
 	<link href='https://fonts.googleapis.com/css?family=Unica One' rel='stylesheet'>
 	<link rel="stylesheet" type="text/css" href="css/home_style2.css" />
+	<link rel="stylesheet" type="text/css" href="css/register_modal.css" />
 	<!--[if IE]>
   		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
@@ -28,7 +31,9 @@
 			font-family: pirate;
 			src: url("http://genero17.in/fonts/Amatic-Bold.ttf");
 		}
-
+        .neucha {
+				font-family: 'Neucha', serif;
+		}
 		.unica-one {
 			font-family: pirate;
 			color: black;
@@ -73,13 +78,12 @@
 		.paytm-btn,
 		.paytm-btn:active,
 		.paytm-btn:focus {
-			background-color: #08B1F7;
+			background-color: #8a8a8a;
 			outline: none;
 			border-style: solid;
 			border-radius: 5px;
 			border-color: transparent;
-			color: #41EAD4;
-			color: white;
+			color: black;
 			font-size: 3rem;
 			padding: 0.25rem 2rem;
 			text-align: center;
@@ -92,7 +96,8 @@
 
 		.paytm-btn:hover {
 			background-color: transparent;
-			border-color: #77DAFC;
+			border-color: #565656;
+			color: #fff;
 		}
 	</style>
 </head>
@@ -108,22 +113,70 @@
 	<!-- </div>
 		</div>
 	</div> -->
-	<div id="regModal" class="w3-modal">
-		<div class="w3-modal-content" style="background-image:url('img/regBg.jpg');background-size:cover;padding:2%;">
+	<div id="myNav" class="overlay" >
+	<img class="w3-hide-small w3-hide-medium" src="img/registration.png" style="position: absolute;left:0;width: 25%;height: 100%">
+	  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+	     <p class="w3-center w3-jumbo w3-text-white neucha">
+	     	Registration Started! 
+	     </p>
+	     <a href="https://paytm.com/education?op=ABES%20Engineering%20College&type=registration" target="blank">
+	        <button class="paytm-btn">
+	           <b>Pay with Paytm</b>
+	        </button>
+	     </a>
+			<h2 style="position: absolute;right: 8%;bottom: 6%;color: #fff;font-family: pirate;font-size:3rem;">
+					Powered By:<img src="img/paytm.png" alt="GeneroNEWS" style="display:block;max-height:10vh;">
+			</h2>
+				
+	  </div>
+	</div>
+	<div id="myNav2" class="overlay" >
+	     <div class="w3-row">
+	     	<div class="w3-col l4">
+	     		<p class="neucha w3-text-white w3-center w3-xxxlarge" style="">DAY 1</p>
+	     	</div>
+	     	<div class="w3-col l4">
+	     		<a href="http://genero17.in/saDay2.html" target="blank" style="text-decoration:none; "><p class="neucha w3-text-white w3-center w3-xxxlarge" style="">DAY 2</p></a>
+	     	</div>
+	     	<div class="w3-col l4">
+	     		<a href="http://genero17.in/starNight.html" target="blank" style="text-decoration:none ">	<p class="neucha w3-text-white w3-center w3-xxxlarge" style="">DAY 3</p></a>
+	     	</div>
+	     </div>				
+	  </div>
+	</div>
+	<div id="myNav3" class="overlay1 w3-hide-small w3-hide-medium">
+	  <a href="javascript:void(0)" class="closebtn3" onclick="closeNav1()">&times;</a>
+	  <div class="overlay-content">
+	    <div class="w3-row">
+	     	<div class="w3-col l4">
+	     		<img src="./img/ashmita2.jpg" style="margin-top: -13%">
+	     	</div>
+	     	<div class="w3-col l4">
+	     		<a href="http://genero17.in/saDay2.html" target="blank"><img src="./img/jaspreetsingh.jpg" style="margin-top: -13%"></a>
+	     	</div>
+	     	<div class="w3-col l4">
+	     		<a href="http://genero17.in/starNight.html" target="blank">	<img src="./img/day3.jpg" style="margin-top: -13%;width: 80%"></a>
+	     	</div>
+	     </div>
+	  </div>
+	</div>
+	 <!-- <div id="regModal" class="w3-modal ">
+		<!-- <div class="w3-modal-content" style="background-image:url('img/regBg.jpg');background-size:cover;padding:2%;">
 			<div class="w3-container" style="padding:0;align-content:center;">
 				<span style="font-size:1.5em;" onclick="document.getElementById('regModal').style.display='none'" class="w3-button w3-display-topright">&times;</span>
-				<!-- <h1 style="text-align:center;font-family: pirate;font-size:5rem;" class="main">Registration starts in <span id="timer"></span></h1> -->
+				<! <h1 style="text-align:center;font-family: pirate;font-size:5rem;" class="main">Registration starts in <span id="timer"></span></h1> >
 				<h1 style="text-align:center;font-family: pirate;font-size:5rem;" class="main">Registration started!</h1>
-				<!-- <div style="background-image:url('img/paytm.png');min-width:10vw;">hello</div> -->
+				<! <div style="background-image:url('img/paytm.png');min-width:10vw;">hello</div> >
 				<a href="https://paytm.com/education?op=ABES%20Engineering%20College&type=registration" target="blank">	<button class="paytm-btn"><b>Pay with Paytm</b></button></a>
 				<h2 style="text-align:center;font-family: pirate;font-size:5rem;">
 					Powered By:
 				</h2>
 				<img src="img/paytm.png" alt="GeneroNEWS" style="display:block;text-align:center;max-height:20vh;margin-left:30%">
 			</div>
-		</div>
-	</div>
-	<div id="samodal" class="w3-modal">
+		</div> -->
+	<!-- </div>
+	 -->
+	 <div id="samodal" class="w3-modal">
 		<div class="w3-modal-content" style="background-image:url('img/regBg.jpg');background-size:cover;padding:2%;">
 			<div class="w3-container" style="padding:0;align-content:center;">
 					<span style="font-size:1.5em;" onclick="document.getElementById('samodal').style.display='none'" class="w3-button w3-display-topright">&times;</span>
@@ -218,6 +271,9 @@
 			  </h1>
 			  <h1><span id="hide" class="landing-header__tagline unica-one" ><img src="img/home_genero.png" class="sw-hide-medium sw-hide-small" style="width: 100%;margin-left: 10%;padding-bottom: 14vw;padding-right: 5vw">
 			  </h1>
+			  <p class="neucha landing-header__tagline w3-xxlarge w3-text-white w3-display-right" style=" margin-right: 8%;">
+			  	1st - 2nd - 3rd Novemeber
+			  </p>
 		</header>
 		<!-- /landing-header -->
 		<!-- Trigger button for layout change -->
@@ -241,15 +297,15 @@
 						</a>
 				</li>
 				<li class="featured-list__item">
-					<a href="#" class="featured-list__link" onclick="document.getElementById('regModal').style.display='block'">
+					<a href="#" class="featured-list__link" onclick="openNav()">
 							<img class="featured-list__img" src="img/icons/m2.svg" alt="Marine 2">
 							<h3 class="featured-list__title">Register</h3>
 						</a>
 				</li>
 				<li class="featured-list__item">
-					<a href="#" class="featured-list__link" onclick="document.getElementById('samodal').style.display='block'">
+					<a href="#" class="featured-list__link" onclick="openNav1()">
 							<img class="featured-list__img" src="img/icons/m3.svg" alt="Marine 3">
-							<h3 class="featured-list__title">Special attractions</h3>
+							<h3 class="featured-list__title " style="font-size: 13px;margin-bottom: 17%">Special attractions</h3>
 						</a>
 				</li>
 				<li class="featured-list__item">
@@ -261,13 +317,13 @@
 				<li class="featured-list__item">
 					<a href="/team.html" class="featured-list__link">
 							<img class="featured-list__img" src="img/icons/m5.svg" alt="Marine 5">
-							<h3 class="featured-list__title">Team</h3>
+							<h3 class="featured-list__title" style="margin-bottom: 16%">Team</h3>
 						</a>
 				</li>
 				<li class="featured-list__item">
 					<a href="/aboutus" class="featured-list__link">
 							<img class="featured-list__img" src="img/icons/m6.svg" alt="Marine 6">
-							<h3 class="featured-list__title">About Us</h3>
+							<h3 class="featured-list__title" style="margin-bottom: 16%">About Us</h3>
 						</a>
 				</li>
 			</ul>
@@ -282,9 +338,27 @@
 			</svg>
 		</div>
 	</main>
+
 	<script src="js/home_howler.min.js"></script>
 	<script src="js/home_imagesloaded.pkgd.min.js"></script>
 	<script src="js/home_main_2.js"></script>
+	<script>
+	function openNav() {
+	    document.getElementById("myNav").style.width = "100%";
+	}
+	function openNav1() {
+	    document.getElementById("myNav2").style.width = "100%";
+	    setTimeout(function(){ document.getElementById("myNav3").style.height = "100%"; }, 1000);
+	}
+
+	function closeNav() {
+	    document.getElementById("myNav").style.width = "0%";
+	}
+	function closeNav1() {
+		document.getElementById("myNav3").style.height = "0%";
+	    document.getElementById("myNav2").style.width = "0%";
+	}
+	</script>
 </body>
 
 </html>

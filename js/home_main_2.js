@@ -218,7 +218,7 @@
 					audio.loop('potc');
 					audio.play('lake');
 					audio.play('potc');
-					audio.volume('potc',0.2);
+					audio.volume('potc',0.00);
 					// Init the bubbles canvas animation.
 					bubbles.init();
 					// Init/Bind Events
