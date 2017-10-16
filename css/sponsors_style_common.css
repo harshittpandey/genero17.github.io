@@ -22,6 +22,7 @@
    left: 0;
 }
 .view img {
+   width: 70%;
    display: block;
    position: relative;
 }
