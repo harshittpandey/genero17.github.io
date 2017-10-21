@@ -8,7 +8,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Day2 - Genero17</title>
+  <title>Day1 - Genero17</title>
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M"
     crossorigin="anonymous">
@@ -177,16 +177,17 @@
     ]
     var slideLen = 4
     var index = 0;
-
-    setTimeout(function () {
-      setInterval(function () {
+    function slide() {
         $("#particle-js").css("background-image", "url('img/SA/1/" + urls[index] + "')")
         for (i = 1; i <= slideLen; ++i) {
           $("#slide" + i).css("display", "none")
         }
         $("#slide" + (index + 1)).css("display", "block")
         index = (index + 1) % urls.length
-      }, 3000)
+      }
+slide()
+    setTimeout(function () {
+      setInterval(slide, 3000)
     },0)
   </script>
 
