@@ -23,6 +23,12 @@
 		font-family: pirate;
 		color: whitesmoke;
 	}
+	.btn{
+		font-size: 1em;
+		background-color: transparent;
+		border-style: solid;
+		color: whitesmoke;
+	}
 </style>
 
 <body>
@@ -42,46 +48,18 @@
 					literary, E-Gaming wrapped up with three Exclusive Events for each day. ABES has been organizing “GENERO” for past several
 					years now and with a good amount of audience from colleges and places all over Delhi NCR and made the “GENERO” a success
 					story.
+					<br>
+					<br>
+					<a href="https://www.youtube.com/watch?v=7GVS_zSWu9s" target="_blank">	<button class="btn">Genero'17 teaser</button> </a>
+					<br>
+					<br>
+					<a href="https://www.youtube.com/watch?v=afd9XH0oDG4" target="_blank">	<button class="btn">Genero'16 After Movie</button> </a>					
 				</h2>
-				<iframe style="position:fixed;bottom:0;right:0;" width="400" height="250" src="https://www.youtube-nocookie.com/embed/afd9XH0oDG4?rel=0"
-				 frameborder="0" allowfullscreen></iframe>
+				
+				<!-- <iframe style="position:fixed;bottom:0;right:0;" width="400" height="250" src="https://www.youtube-nocookie.com/embed/afd9XH0oDG4?rel=0"
+				 frameborder="0" allowfullscreen></iframe> -->
 			</div>
 		</div>
 	</div>
 </body>
-<script>
-	function countdown() {
-		// Set the date we're counting down to
-		var countDownDate = new Date("Sep 21, 2017 10:00:00").getTime();
-
-		// Update the count down every 1 second
-		var x = setInterval(function () {
-
-			// Get todays date and time
-			var now = new Date().getTime();
-
-			// Find the distance between now an the count down date
-			var distance = countDownDate - now;
-
-			// Time calculations for days, hours, minutes and seconds
-			var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-			var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-			var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-			var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-			// Display the result in the element with id="demo"
-			document.getElementById("timer").innerHTML = days + "d " + hours + "h "
-				+ minutes + "m " + seconds + "s ";
-
-			// If the count down is finished, write some text
-			if (distance < 0) {
-				clearInterval(x);
-				document.getElementById("timer").innerHTML = "EXPIRED";
-			}
-		}, 1000);
-	}
-	countdown();
-
-</script>
-
 </html>
