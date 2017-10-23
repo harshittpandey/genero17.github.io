@@ -11,6 +11,10 @@ body {
     font-family: pirate
 }
 
+.wide-flex {
+    content: '';
+    width: 100%;
+}
 
 #posters {
     display: flex;
@@ -34,6 +38,7 @@ figure {
     overflow: hidden;
 }
 /* common */
+
 
 .grid figure {
     position: relative;
